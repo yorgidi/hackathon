@@ -1,44 +1,29 @@
 <div data-role="view" id="people" data-title="People" data-layout="layout" data-init="mobileListViewFiltering">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-                <a data-align="right" data-role="button" class="nav-button" href="#index">Index</a>
-            </div>
-        </header>
+    <ul id="people-listview"></ul>
+</div>
 
-        <ul id="filterable-listview"></ul>
-    </div>
-
-    <script type="text/x-kendo-tmpl" id="mobile-listview-filtering-template">
-        <ul>
-                <li><h2>${name} <span>Callahan</span></h2><img src="../../content/mobile/overview/carine.jpg" /></li>
-                <li>Weekly average sales <span class="sales-up">$ 8,250</span></li>
-                <li>Monthly average sales <span class="sales-up">$ 32,000</span></li>
-        </ul>
-    </script>
-    <style scoped>
-        .product h3
-        {
-            font-size: 1.3em;
-            line-height: 1.4em;
-            margin: 0;
-            padding: 0;
-            height: 1.3em;
-            overflow: hidden;
-        }
-        .product p
-        {
-            font-size: 1em;
-            margin: 0;
-            padding: .3em 0 0;
-        }
-        .pullImage
-        {
-            width: 64px;
-            height: 64px;
-            border-radius: 3px;
-            float: left;
-            margin-right: 10px;
-        }
-    </style>
-    
+<script type="text/x-kendo-tmpl" id="mobile-listview-filtering-template">
+        
+           ${name}<br><img src="http://demos.kendoui.com/content/mobile/overview/carine.jpg" />
+           <div >
+               <span>${email}</span><br>
+               <span>${team}</span><br>
+               <span><a href="tel:${phone}">${phone}</a></span><br>
+           </div>
+</script>
+<style scoped>
+    img{
+        float:left;
+    }
+    #people-listview div{
+        float:right;
+        font-size:15px;
+        width:150px;
+        height:50px;
+        position:relative;
+        left:-35px;
+    }
+    #people-listview li{
+        height:150px;
+    }
+</style>
