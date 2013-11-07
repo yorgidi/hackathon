@@ -1,32 +1,46 @@
-<div data-role="view" id = "leaves" data-title="Leaves" data-layout="layout">
+<div data-role="view" id = "leaves" data-title="Leaves" data-layout="layout" data-model="leavesViewModel" data-show="leaves.initialize">
     <h1>Leaves</h1>
-    <ul id="laves-list">
+    
+    <ul id="leaves-list">
         <li>
             <h2>Regular</h2>
-            <div id="regularLeavesBar" /><span id="regularCount" /><br/>
-            <span id="usedRegularCount" data-bind="text: usedRegularLeaves" />/<span id="allRegularCount"/>
+            <div id="regularLeavesBar" ></div><span id="regularCount" ></span><br/>
+            <span id="usedRegularCount" data-bind="text: usedRegularLeaves"/> / <span id="allRegularCount" data-bind="text: allRegularLeaves"/>
         </li>
         
         <li>
             <h2>Student</h2>
-            <div id="studentLeavesBar" /><span id="studentCount"/><br/>
-            <span id="usedStudentCount"/>/<span id="allStudentCount"/>            
+            <div id="studentLeavesBar" ></div><span id="studentCount"></span><br/>
+            <span id="usedStudentCount" data-bind="text: usedStudentLeaves"/> / <span id="allStudentCount" data-bind="text: allStudentLeaves"/>            
         </li>
         
         <li>
             <h2>Bonus</h2>
-            <div id="bonusLeavesBar" /><span id="bonusCount"/><br/>
-            <span id="usedBonusCount"/>/<span id="allBonusCount"/>            
+            <div id="bonusLeavesBar" ></div><span id="bonusCount"></span><br/>
+            <span id="usedBonusCount" data-bind="text: usedBonusDays"/> / <span id="allBonusCount" data-bind="text: allBonusDays"/>            
         </li>
     </ul>
-    <div id="regularLeaves"/>
 </div>
 
 <script>
+    var leavesViewModel = kendo.observable({
+        allStudentLeaves: 0,
+        remainingStudentLeaves: 0,
+        usedStudentLeaves: 0,
+        
+        allRegularLeaves: 0,
+        remainingRegularLeaves: 0,
+        usedRegularLeaves: 0,
+        
+        allBonusDays: 0,
+        remainingBonusDays: 0,
+        usedBonusDays: 0
+    });
+
     var Leaves = function(){
-        this.remainingLeaves;
-        this.remainingStudentLeaves;
-        this.remainingBonusDays;
+        this.regularLeavesBar = null;
+        this.studentLeavesBar = null;
+        this.bonusDaysBar = null;
     }
     Leaves.prototype = {
         selectors: {
@@ -48,37 +62,62 @@
             studentCount: "#studentCount",
         },
         
-        initialize: function(){
-            this.initializeProgressBars();
+        initialize: function(){            
+            var self = leaves;
             
-            var self = this;
-            
-            this.loadData(function(data){
-                $(self.selectors.studentLeavesBar).data("kendoProgressBar").value(data.remainingStudentLeaves);
-                $(self.selectors.regularLeavesBar).data("kendoProgressBar").value(data.remainingRegularLeaves);
-                $(self.selectors.bonusLeavesBar).data("kendoProgressBar").value(data.remainingBonusLeaves);
+            leaves.loadData(function(data){
+                self.initializeProgressBars(data);
                 
-                data.usedStudentLeaves = function() {
-                    return data.allStudentLeaves - data.remainingStudentLeaves;
-                }
+                self.studentLeavesBar.value(data.remainingStudentLeaves);
+                self.regularLeavesBar.value(data.remainingRegularLeaves);
+                self.bonusLeavesBar.value(data.remainingBonusDays);
                 
-                var viewModel = kendo.observable(data); 
+                //data.usedStudentLeaves = function() {
+                //    return data.allStudentLeaves - data.remainingStudentLeaves;
+                //}
                 
-                kendo.bind($("leaves"), viewModel);
+                leavesViewModel.set("usedStudentLeaves", data.allStudentLeaves - data.remainingStudentLeaves);
+                leavesViewModel.set("usedBonusDays", data.allBonusDays - data.remainingBonusDays);
+                leavesViewModel.set("usedRegularLeaves", data.allRegularLeaves - data.remainingRegularLeaves);
+                
+                leavesViewModel.set("allStudentLeaves", data.allStudentLeaves);
+                leavesViewModel.set("allBonusDays", data.allBonusDays);
+                leavesViewModel.set("allRegularLeaves", data.allRegularLeaves);
+                //var viewModel = kendo.observable(data); 
+                
+                //kendo.bind($("leaves-list"), viewModel);
             });
         },
         
-        initializeProgressBars: function() {
-            $(this.selectors.progressBars).each(function () {
-                var pb = $(this).kendoProgressBar({
-                    type: "percent",
-                    animation: {
-                        duration: 600
-                    }
-                }).data("kendoProgressBar");
-                
-                pb.value(0);
-            });
+        initializeProgressBars: function(data) {
+            this.regularLeavesBar = $("#regularLeavesBar").kendoProgressBar({
+                type: "chunk",
+                min: 0,
+                max: data.allRegularLeaves,
+                animation: {
+                    duration: 600
+                }
+            }).data("kendoProgressBar");
+            
+            this.bonusLeavesBar = $(this.selectors.bonusLeavesBar).kendoProgressBar({
+                type: "percent",
+                min: 0,
+                max: data.allBonusDays,
+                animation: {
+                    duration: 600
+                }
+            }).data("kendoProgressBar");
+            
+            this.studentLeavesBar = $(this.selectors.studentLeavesBar).kendoProgressBar({
+                type: "percent",
+                min: 0,
+                max: data.allStudentLeaves,
+                animation: {
+                    duration: 600
+                }
+            }).data("kendoProgressBar");
+            
+            console.log(this.regularLeavesBar);
          },
         
         //here get data from service
@@ -99,7 +138,27 @@
     }
     
     var leaves = new Leaves();
-    console.log("leaves class: " + Leaves);
-    leaves.initialize();
+    //console.log("leaves class: " + Leaves);
+    console.log(leaves);
+    //leaves.initialize();
     
 </script>
+
+ <style scoped>        
+        #leaves-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #leaves-list li:after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 3px;
+            line-height: 0;
+        }
+        #leaves-list .k-progressbar {
+            margin: 0 0 5px 0;
+            width: 90%;
+        }
+    </style>
