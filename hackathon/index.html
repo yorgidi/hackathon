@@ -9,7 +9,6 @@
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     
     <script src="scripts/login.js"></script>
     <script src="scripts/location.js"></script>
@@ -21,15 +20,21 @@
   <body>
       <div data-role="view" id="main" data-titel="Telerik Social" data-stretch="true">
           <div id="tiles-holder">
-              <div class="tile" id="nav-people" data-role="touch" data-tap="tap"><i class="fa fa-group fa-5x"></i><br>People</div>
-              <div class="tile" id="nav-cars"><i class="fa fa-road fa-5x"></i><br>Cars</div>
-              <div class="tile" id="nav-massages"><i class="fa fa-leaf fa-5x"></i><br>Massages</div>
-              <div class="tile" id="nav-leaves"><i class="fa fa-suitcase fa-5x"></i><br>Leaves</div>
-              <div class="tile" id="nav-menu"><i class="fa fa-coffee fa-5x"></i><br>Menu</div>
-              <div class="tile" id="nav-sports"><i class="fa fa-smile-o fa-5x"></i><br>Sports</div>
+              <div class="tile" data-role="touch" data-tap="navPeople"><i class="fa fa-group fa-5x"></i><br>People</div>
+              <div class="tile" data-role="touch" data-tap="navCars"><i class="fa fa-road fa-5x"></i><br>Cars</div>
+              <div class="tile" data-role="touch" data-tap="navMassages"><i class="fa fa-leaf fa-5x"></i><br>Massages</div>
+              <div class="tile" data-role="touch" data-tap="navLeaves"><i class="fa fa-suitcase fa-5x"></i><br>Leaves</div>
+              <div class="tile" data-role="touch" data-tap="navMenu"><i class="fa fa-coffee fa-5x"></i><br>Menu</div>
+              <div class="tile" data-role="touch" data-tap="navSports"><i class="fa fa-smile-o fa-5x"></i><br>Sports</div>
           </div>
       </div>
     <div data-role="view" id="people" data-title="People" data-layout="layout">
+        <header data-role="header">
+        <div data-role="navbar">
+          <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+          <span data-role="view-title"></span>
+        </div>
+      </header>
       People
     </div>
     <div data-role="view" id = "cars" data-title="Cars" data-layout="layout">
@@ -53,10 +58,7 @@
           <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
           <span data-role="view-title"></span>
         </div>
-      </header>
-      
-      <p>TabStrip</p>
-      
+      </header>      
       <div data-role="footer">
         <div data-role="tabstrip">
           <a href="#people" data-icon="contacts">People
@@ -66,54 +68,6 @@
           <a href="#menu" data-icon="bookmarks">Menu</a>
         </div>
       </div>
-    </div>
-    
-    <style scoped>
-      #tabstrip-profile h2 {
-        display: inline-block;
-        font-size: 1.1em;
-        margin: 1.5em 0 0 .7em;
-      }
-      #tabstrip-profile h2 span {
-        display: block;
-        clear: both;
-        font-size: 1.8em;
-        margin: .1em 0 0 0;
-      }
-      #tabstrip-profile img {
-        width: 5em;
-        height: 5em;
-        float: left;
-        margin: 1em;
-        -webkit-box-shadow: 0 1px 3px #333;
-        box-shadow: 0 1px 3px #333;
-        -webkit-border-radius: 8px;
-        border-radius: 8px;
-      }
-      
-      .km-flat #tabstrip-profile img {
-        webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);
-        box-shadow: 0 0 0 1px rgba(0,0,0,.1);
-        -webkit-border-radius: 4px;
-        border-radius: 4px;
-      }
-      
-      .sales-down,
-      .sales-hold,
-      .sales-up,
-      .value {
-        float: right;
-      }
-      .sales-up { color: green; }
-      .sales-down { color: red; }
-      .sales-hold { color: blue; }
-      .value { color: #bbb; }
-    </style>
-    
-    
-    <script>
-      var app = new kendo.mobile.Application(document.body,{skin:"flat"});
-    </script>
-    
+    </div>    
   </body>
 </html>
