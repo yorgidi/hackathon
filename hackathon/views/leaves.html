@@ -1,4 +1,105 @@
+<div data-role="view" id = "leaves" data-title="Leaves" data-layout="layout">
+    <h1>Leaves</h1>
+    <ul id="laves-list">
+        <li>
+            <h2>Regular</h2>
+            <div id="regularLeavesBar" /><span id="regularCount" /><br/>
+            <span id="usedRegularCount" data-bind="text: usedRegularLeaves" />/<span id="allRegularCount"/>
+        </li>
+        
+        <li>
+            <h2>Student</h2>
+            <div id="studentLeavesBar" /><span id="studentCount"/><br/>
+            <span id="usedStudentCount"/>/<span id="allStudentCount"/>            
+        </li>
+        
+        <li>
+            <h2>Bonus</h2>
+            <div id="bonusLeavesBar" /><span id="bonusCount"/><br/>
+            <span id="usedBonusCount"/>/<span id="allBonusCount"/>            
+        </li>
+    </ul>
+    <div id="regularLeaves"/>
+</div>
+
+<script>
+    var Leaves = function(){
+        this.remainingLeaves;
+        this.remainingStudentLeaves;
+        this.remainingBonusDays;
+    }
+    Leaves.prototype = {
+        selectors: {
+            progressBars: "#leaves-list div",
+            studentLeavesBar: "#studentLeavesBar",
+            regularLeavesBar: "#regularLeavesBar",
+            bonusLeavesBar: "#bonusLeavesBar",
+            
+            usedBonusCount: "#usedBonusCount",
+            usedRegularCount: "#usedRegularCount",
+            usedStudentCount: "#usedStudentCount",
+            
+            allBonusCount: "#allBonusCount",
+            allRegularCount: "#allRegularCount",
+            allStudentCount: "#allStudentCount",
+            
+            bonusCount: "#bonusCount",
+            regularCount: "#regularCount",
+            studentCount: "#studentCount",
+        },
+        
+        initialize: function(){
+            this.initializeProgressBars();
+            
+            var self = this;
+            
+            this.loadData(function(data){
+                $(self.selectors.studentLeavesBar).data("kendoProgressBar").value(data.remainingStudentLeaves);
+                $(self.selectors.regularLeavesBar).data("kendoProgressBar").value(data.remainingRegularLeaves);
+                $(self.selectors.bonusLeavesBar).data("kendoProgressBar").value(data.remainingBonusLeaves);
+                
+                data.usedStudentLeaves = function() {
+                    return data.allStudentLeaves - data.remainingStudentLeaves;
+                }
+                
+                var viewModel = kendo.observable(data); 
+                
+                kendo.bind($("leaves"), viewModel);
+            });
+        },
+        
+        initializeProgressBars: function() {
+            $(this.selectors.progressBars).each(function () {
+                var pb = $(this).kendoProgressBar({
+                    type: "percent",
+                    animation: {
+                        duration: 600
+                    }
+                }).data("kendoProgressBar");
+                
+                pb.value(0);
+            });
+         },
+        
+        //here get data from service
+        loadData: function(successCB){
+            var data = {
+                allStudentLeaves: 20,
+                remainingStudentLeaves: 6,
+                
+                allRegularLeaves: 20,
+                remainingRegularLeaves: 11,
+                
+                allBonusDays: 3,
+                remainingBonusDays: 1
+            }
+            
+            successCB(data);
+        }
+    }
     
-    <div data-role="view" id = "leaves" data-title="Leaves" data-layout="layout">
-      Leaves
-    </div>
+    var leaves = new Leaves();
+    console.log("leaves class: " + Leaves);
+    leaves.initialize();
+    
+</script>
