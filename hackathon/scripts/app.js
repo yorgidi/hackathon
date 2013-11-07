@@ -1,17 +1,17 @@
 function navPeople(){
-    app.navigate("#people");
+    app.navigate("views/people.html");
 }
 function navCars(){
-    app.navigate("#cars");
+    app.navigate("views/cars.html");
 }
 function navMassages(){
-    app.navigate("#massages");
+    app.navigate("views/massages.html");
 }
 function navLeaves(){
-    app.navigate("#leaves");
+    app.navigate("views/leaves.html");
 }
 function navMenu(){
-    app.navigate("#menu");
+    app.navigate("views/menu.html");
 }
 
 
