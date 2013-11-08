@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAE4545E182BD6300021911C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4545D182BD6300021911C /* Foundation.framework */; };
+		DAE45460182BD6300021911C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4545F182BD6300021911C /* CoreGraphics.framework */; };
+		DAE45462182BD6300021911C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE45461182BD6300021911C /* UIKit.framework */; };
+		DAE45468182BD6300021911C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE45466182BD6300021911C /* InfoPlist.strings */; };
+		DAE4546A182BD6300021911C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE45469182BD6300021911C /* main.m */; };
+		DAE4546E182BD6300021911C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE4546D182BD6300021911C /* AppDelegate.m */; };
+		DAE45471182BD6300021911C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE4546F182BD6300021911C /* Main.storyboard */; };
+		DAE45474182BD6300021911C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE45473182BD6300021911C /* ViewController.m */; };
+		DAE45476182BD6300021911C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE45475182BD6300021911C /* Images.xcassets */; };
+		DAE4547D182BD6300021911C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4547C182BD6300021911C /* XCTest.framework */; };
+		DAE4547E182BD6300021911C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4545D182BD6300021911C /* Foundation.framework */; };
+		DAE4547F182BD6300021911C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE45461182BD6300021911C /* UIKit.framework */; };
+		DAE45487182BD6300021911C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE45485182BD6300021911C /* InfoPlist.strings */; };
+		DAE45489182BD6300021911C /* Telerik_SocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE45488182BD6300021911C /* Telerik_SocialTests.m */; };
+		DAE45494182BEA3E0021911C /* DailyMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE45493182BEA3E0021911C /* DailyMenuVC.m */; };
+		DAE45499182BEB450021911C /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = DAE45498182BEB450021911C /* menu.html */; };
+		DAE4549C182BEF510021911C /* MassageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE4549B182BEF510021911C /* MassageVC.m */; };
+		DAE4549F182BF2EA0021911C /* LeavesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE4549E182BF2EA0021911C /* LeavesVC.m */; };
+		DAE454A2182BFECA0021911C /* CarPullVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A1182BFECA0021911C /* CarPullVC.m */; };
+		DAE454A5182C070B0021911C /* PeopleData.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A4182C070B0021911C /* PeopleData.m */; };
+		DAE454A8182C0B680021911C /* PeopleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A7182C0B680021911C /* PeopleVC.m */; };
+		DAE454AB182C0CBD0021911C /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454AA182C0CBD0021911C /* PersonCell.m */; };
+		DAE454BA182C1E040021911C /* alexander vakrilov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454AD182C1E040021911C /* alexander vakrilov.jpg */; };
+		DAE454BB182C1E040021911C /* doug laird.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454AE182C1E040021911C /* doug laird.jpg */; };
+		DAE454BC182C1E040021911C /* georgi mateev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454AF182C1E040021911C /* georgi mateev.jpg */; };
+		DAE454BD182C1E040021911C /* kiril nikolov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B0182C1E040021911C /* kiril nikolov.jpg */; };
+		DAE454BE182C1E040021911C /* mihail valkov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B1182C1E040021911C /* mihail valkov.jpg */; };
+		DAE454BF182C1E040021911C /* nikola irinchev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B2182C1E040021911C /* nikola irinchev.jpg */; };
+		DAE454C0182C1E040021911C /* petya bogdanova.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B3182C1E040021911C /* petya bogdanova.jpg */; };
+		DAE454C1182C1E040021911C /* stanimir karoserov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B4182C1E040021911C /* stanimir karoserov.jpg */; };
+		DAE454C2182C1E040021911C /* stephen forte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B5182C1E040021911C /* stephen forte.jpg */; };
+		DAE454C3182C1E040021911C /* svetozar georgiev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B6182C1E040021911C /* svetozar georgiev.jpg */; };
+		DAE454C4182C1E040021911C /* todd anglin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B7182C1E040021911C /* todd anglin.jpg */; };
+		DAE454C5182C1E040021911C /* viktor bukurov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B8182C1E040021911C /* viktor bukurov.jpg */; };
+		DAE454C6182C1E040021911C /* yordan dimitrov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B9182C1E040021911C /* yordan dimitrov.jpg */; };
+		DAE454C8182C24BD0021911C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE454C7182C24BD0021911C /* QuartzCore.framework */; };
+		DAE454CA182C24C40021911C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE454C9182C24C40021911C /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAE45480182BD6300021911C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAE45452182BD6300021911C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAE45459182BD6300021911C;
+			remoteInfo = "Telerik Social";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAE4545A182BD6300021911C /* Telerik Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telerik Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE4545D182BD6300021911C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DAE4545F182BD6300021911C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DAE45461182BD6300021911C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DAE45465182BD6300021911C /* Telerik Social-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik Social-Info.plist"; sourceTree = "<group>"; };
+		DAE45467182BD6300021911C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAE45469182BD6300021911C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAE4546B182BD6300021911C /* Telerik Social-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Telerik Social-Prefix.pch"; sourceTree = "<group>"; };
+		DAE4546C182BD6300021911C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAE4546D182BD6300021911C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAE45470182BD6300021911C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAE45472182BD6300021911C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAE45473182BD6300021911C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAE45475182BD6300021911C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Telerik SocialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE4547C182BD6300021911C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DAE45484182BD6300021911C /* Telerik SocialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik SocialTests-Info.plist"; sourceTree = "<group>"; };
+		DAE45486182BD6300021911C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAE45488182BD6300021911C /* Telerik_SocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Telerik_SocialTests.m; sourceTree = "<group>"; };
+		DAE45492182BEA3E0021911C /* DailyMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyMenuVC.h; sourceTree = "<group>"; };
+		DAE45493182BEA3E0021911C /* DailyMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyMenuVC.m; sourceTree = "<group>"; };
+		DAE45498182BEB450021911C /* menu.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = menu.html; sourceTree = "<group>"; };
+		DAE4549A182BEF510021911C /* MassageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MassageVC.h; sourceTree = "<group>"; };
+		DAE4549B182BEF510021911C /* MassageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MassageVC.m; sourceTree = "<group>"; };
+		DAE4549D182BF2EA0021911C /* LeavesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeavesVC.h; sourceTree = "<group>"; };
+		DAE4549E182BF2EA0021911C /* LeavesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeavesVC.m; sourceTree = "<group>"; };
+		DAE454A0182BFECA0021911C /* CarPullVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPullVC.h; sourceTree = "<group>"; };
+		DAE454A1182BFECA0021911C /* CarPullVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPullVC.m; sourceTree = "<group>"; };
+		DAE454A3182C070B0021911C /* PeopleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleData.h; sourceTree = "<group>"; };
+		DAE454A4182C070B0021911C /* PeopleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleData.m; sourceTree = "<group>"; };
+		DAE454A6182C0B680021911C /* PeopleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleVC.h; sourceTree = "<group>"; };
+		DAE454A7182C0B680021911C /* PeopleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleVC.m; sourceTree = "<group>"; };
+		DAE454A9182C0CBD0021911C /* PersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCell.h; sourceTree = "<group>"; };
+		DAE454AA182C0CBD0021911C /* PersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCell.m; sourceTree = "<group>"; };
+		DAE454AD182C1E040021911C /* alexander vakrilov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "alexander vakrilov.jpg"; sourceTree = "<group>"; };
+		DAE454AE182C1E040021911C /* doug laird.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "doug laird.jpg"; sourceTree = "<group>"; };
+		DAE454AF182C1E040021911C /* georgi mateev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "georgi mateev.jpg"; sourceTree = "<group>"; };
+		DAE454B0182C1E040021911C /* kiril nikolov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kiril nikolov.jpg"; sourceTree = "<group>"; };
+		DAE454B1182C1E040021911C /* mihail valkov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mihail valkov.jpg"; sourceTree = "<group>"; };
+		DAE454B2182C1E040021911C /* nikola irinchev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nikola irinchev.jpg"; sourceTree = "<group>"; };
+		DAE454B3182C1E040021911C /* petya bogdanova.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "petya bogdanova.jpg"; sourceTree = "<group>"; };
+		DAE454B4182C1E040021911C /* stanimir karoserov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stanimir karoserov.jpg"; sourceTree = "<group>"; };
+		DAE454B5182C1E040021911C /* stephen forte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stephen forte.jpg"; sourceTree = "<group>"; };
+		DAE454B6182C1E040021911C /* svetozar georgiev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "svetozar georgiev.jpg"; sourceTree = "<group>"; };
+		DAE454B7182C1E040021911C /* todd anglin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "todd anglin.jpg"; sourceTree = "<group>"; };
+		DAE454B8182C1E040021911C /* viktor bukurov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "viktor bukurov.jpg"; sourceTree = "<group>"; };
+		DAE454B9182C1E040021911C /* yordan dimitrov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yordan dimitrov.jpg"; sourceTree = "<group>"; };
+		DAE454C7182C24BD0021911C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DAE454C9182C24C40021911C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAE45457182BD6300021911C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE454CA182C24C40021911C /* MessageUI.framework in Frameworks */,
+				DAE454C8182C24BD0021911C /* QuartzCore.framework in Frameworks */,
+				DAE45460182BD6300021911C /* CoreGraphics.framework in Frameworks */,
+				DAE45462182BD6300021911C /* UIKit.framework in Frameworks */,
+				DAE4545E182BD6300021911C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE45478182BD6300021911C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE4547D182BD6300021911C /* XCTest.framework in Frameworks */,
+				DAE4547F182BD6300021911C /* UIKit.framework in Frameworks */,
+				DAE4547E182BD6300021911C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAE45451182BD6300021911C = {
+			isa = PBXGroup;
+			children = (
+				DAE45463182BD6300021911C /* Telerik Social */,
+				DAE45482182BD6300021911C /* Telerik SocialTests */,
+				DAE4545C182BD6300021911C /* Frameworks */,
+				DAE4545B182BD6300021911C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAE4545B182BD6300021911C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAE4545A182BD6300021911C /* Telerik Social.app */,
+				DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAE4545C182BD6300021911C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAE454C9182C24C40021911C /* MessageUI.framework */,
+				DAE454C7182C24BD0021911C /* QuartzCore.framework */,
+				DAE4545D182BD6300021911C /* Foundation.framework */,
+				DAE4545F182BD6300021911C /* CoreGraphics.framework */,
+				DAE45461182BD6300021911C /* UIKit.framework */,
+				DAE4547C182BD6300021911C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAE45463182BD6300021911C /* Telerik Social */ = {
+			isa = PBXGroup;
+			children = (
+				DAE45497182BEB450021911C /* assets */,
+				DAE4546C182BD6300021911C /* AppDelegate.h */,
+				DAE4546D182BD6300021911C /* AppDelegate.m */,
+				DAE4546F182BD6300021911C /* Main.storyboard */,
+				DAE45472182BD6300021911C /* ViewController.h */,
+				DAE45473182BD6300021911C /* ViewController.m */,
+				DAE45475182BD6300021911C /* Images.xcassets */,
+				DAE45464182BD6300021911C /* Supporting Files */,
+				DAE45492182BEA3E0021911C /* DailyMenuVC.h */,
+				DAE45493182BEA3E0021911C /* DailyMenuVC.m */,
+				DAE4549A182BEF510021911C /* MassageVC.h */,
+				DAE4549B182BEF510021911C /* MassageVC.m */,
+				DAE4549D182BF2EA0021911C /* LeavesVC.h */,
+				DAE4549E182BF2EA0021911C /* LeavesVC.m */,
+				DAE454A0182BFECA0021911C /* CarPullVC.h */,
+				DAE454A1182BFECA0021911C /* CarPullVC.m */,
+				DAE454A3182C070B0021911C /* PeopleData.h */,
+				DAE454A4182C070B0021911C /* PeopleData.m */,
+				DAE454A6182C0B680021911C /* PeopleVC.h */,
+				DAE454A7182C0B680021911C /* PeopleVC.m */,
+				DAE454A9182C0CBD0021911C /* PersonCell.h */,
+				DAE454AA182C0CBD0021911C /* PersonCell.m */,
+			);
+			path = "Telerik Social";
+			sourceTree = "<group>";
+		};
+		DAE45464182BD6300021911C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAE45465182BD6300021911C /* Telerik Social-Info.plist */,
+				DAE45466182BD6300021911C /* InfoPlist.strings */,
+				DAE45469182BD6300021911C /* main.m */,
+				DAE4546B182BD6300021911C /* Telerik Social-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAE45482182BD6300021911C /* Telerik SocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAE45488182BD6300021911C /* Telerik_SocialTests.m */,
+				DAE45483182BD6300021911C /* Supporting Files */,
+			);
+			path = "Telerik SocialTests";
+			sourceTree = "<group>";
+		};
+		DAE45483182BD6300021911C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAE45484182BD6300021911C /* Telerik SocialTests-Info.plist */,
+				DAE45485182BD6300021911C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAE45497182BEB450021911C /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DAE454AC182C1E040021911C /* pictures */,
+				DAE45498182BEB450021911C /* menu.html */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		DAE454AC182C1E040021911C /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				DAE454AD182C1E040021911C /* alexander vakrilov.jpg */,
+				DAE454AE182C1E040021911C /* doug laird.jpg */,
+				DAE454AF182C1E040021911C /* georgi mateev.jpg */,
+				DAE454B0182C1E040021911C /* kiril nikolov.jpg */,
+				DAE454B1182C1E040021911C /* mihail valkov.jpg */,
+				DAE454B2182C1E040021911C /* nikola irinchev.jpg */,
+				DAE454B3182C1E040021911C /* petya bogdanova.jpg */,
+				DAE454B4182C1E040021911C /* stanimir karoserov.jpg */,
+				DAE454B5182C1E040021911C /* stephen forte.jpg */,
+				DAE454B6182C1E040021911C /* svetozar georgiev.jpg */,
+				DAE454B7182C1E040021911C /* todd anglin.jpg */,
+				DAE454B8182C1E040021911C /* viktor bukurov.jpg */,
+				DAE454B9182C1E040021911C /* yordan dimitrov.jpg */,
+			);
+			path = pictures;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAE45459182BD6300021911C /* Telerik Social */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Social" */;
+			buildPhases = (
+				DAE45456182BD6300021911C /* Sources */,
+				DAE45457182BD6300021911C /* Frameworks */,
+				DAE45458182BD6300021911C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Telerik Social";
+			productName = "Telerik Social";
+			productReference = DAE4545A182BD6300021911C /* Telerik Social.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAE4547A182BD6300021911C /* Telerik SocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik SocialTests" */;
+			buildPhases = (
+				DAE45477182BD6300021911C /* Sources */,
+				DAE45478182BD6300021911C /* Frameworks */,
+				DAE45479182BD6300021911C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAE45481182BD6300021911C /* PBXTargetDependency */,
+			);
+			name = "Telerik SocialTests";
+			productName = "Telerik SocialTests";
+			productReference = DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAE45452182BD6300021911C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Telerik;
+				TargetAttributes = {
+					DAE4547A182BD6300021911C = {
+						TestTargetID = DAE45459182BD6300021911C;
+					};
+				};
+			};
+			buildConfigurationList = DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Social" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAE45451182BD6300021911C;
+			productRefGroup = DAE4545B182BD6300021911C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAE45459182BD6300021911C /* Telerik Social */,
+				DAE4547A182BD6300021911C /* Telerik SocialTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAE45458182BD6300021911C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE454BE182C1E040021911C /* mihail valkov.jpg in Resources */,
+				DAE454C4182C1E040021911C /* todd anglin.jpg in Resources */,
+				DAE454C2182C1E040021911C /* stephen forte.jpg in Resources */,
+				DAE454BC182C1E040021911C /* georgi mateev.jpg in Resources */,
+				DAE454BB182C1E040021911C /* doug laird.jpg in Resources */,
+				DAE45476182BD6300021911C /* Images.xcassets in Resources */,
+				DAE454C1182C1E040021911C /* stanimir karoserov.jpg in Resources */,
+				DAE45499182BEB450021911C /* menu.html in Resources */,
+				DAE454BA182C1E040021911C /* alexander vakrilov.jpg in Resources */,
+				DAE454BD182C1E040021911C /* kiril nikolov.jpg in Resources */,
+				DAE45468182BD6300021911C /* InfoPlist.strings in Resources */,
+				DAE454C3182C1E040021911C /* svetozar georgiev.jpg in Resources */,
+				DAE454BF182C1E040021911C /* nikola irinchev.jpg in Resources */,
+				DAE454C0182C1E040021911C /* petya bogdanova.jpg in Resources */,
+				DAE454C6182C1E040021911C /* yordan dimitrov.jpg in Resources */,
+				DAE454C5182C1E040021911C /* viktor bukurov.jpg in Resources */,
+				DAE45471182BD6300021911C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE45479182BD6300021911C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE45487182BD6300021911C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAE45456182BD6300021911C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE454AB182C0CBD0021911C /* PersonCell.m in Sources */,
+				DAE45474182BD6300021911C /* ViewController.m in Sources */,
+				DAE45494182BEA3E0021911C /* DailyMenuVC.m in Sources */,
+				DAE4549F182BF2EA0021911C /* LeavesVC.m in Sources */,
+				DAE4549C182BEF510021911C /* MassageVC.m in Sources */,
+				DAE454A8182C0B680021911C /* PeopleVC.m in Sources */,
+				DAE4546E182BD6300021911C /* AppDelegate.m in Sources */,
+				DAE454A2182BFECA0021911C /* CarPullVC.m in Sources */,
+				DAE454A5182C070B0021911C /* PeopleData.m in Sources */,
+				DAE4546A182BD6300021911C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAE45477182BD6300021911C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE45489182BD6300021911C /* Telerik_SocialTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAE45481182BD6300021911C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAE45459182BD6300021911C /* Telerik Social */;
+			targetProxy = DAE45480182BD6300021911C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAE45466182BD6300021911C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE45467182BD6300021911C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DAE4546F182BD6300021911C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE45470182BD6300021911C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAE45485182BD6300021911C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAE45486182BD6300021911C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAE4548A182BD6300021911C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAE4548B182BD6300021911C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAE4548D182BD6300021911C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
+				INFOPLIST_FILE = "Telerik Social/Telerik Social-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DAE4548E182BD6300021911C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
+				INFOPLIST_FILE = "Telerik Social/Telerik Social-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DAE45490182BD6300021911C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Telerik Social.app/Telerik Social";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Telerik SocialTests/Telerik SocialTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DAE45491182BD6300021911C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Telerik Social.app/Telerik Social";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
+				INFOPLIST_FILE = "Telerik SocialTests/Telerik SocialTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE4548A182BD6300021911C /* Debug */,
+				DAE4548B182BD6300021911C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Social" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE4548D182BD6300021911C /* Debug */,
+				DAE4548E182BD6300021911C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik SocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAE45490182BD6300021911C /* Debug */,
+				DAE45491182BD6300021911C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAE45452182BD6300021911C /* Project object */;
+}
