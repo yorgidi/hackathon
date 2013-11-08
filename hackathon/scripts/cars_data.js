@@ -103,7 +103,7 @@ var carsViewModel = kendo.observable({
     dsitrict: null,
     leaveTime: null,
     rideType: 1,
-    isEdit: true,
+    isEdit: false,
     
     getRideType: function() {
         var type = carsViewModel.get("rideType");
@@ -137,4 +137,14 @@ var carsViewModel = kendo.observable({
         carsViewModel.set("isEdit", true); 
     },
     
+    onFilterSelected: function(e) {
+        var buttonGroup = e.sender;
+        var index = buttonGroup.current().index();
+        if (index === 0) {
+            carsViewModel.set("travelMatches", travelMatches);
+        }
+        else {
+            carsViewModel.set("travelMatches", travelMatches.slice(2, 3));
+        }
+    }
 });

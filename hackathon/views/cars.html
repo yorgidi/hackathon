@@ -81,11 +81,21 @@
                        style="display: block; margin: 0 2em 0 2em; text-align: center;">Edit</a>
                 </li>
             </ul>
-
         </li>
 
         <li data-bind="visible:checkIsNotEdit()">
             Pick Your Travel Buddy
+            <ul>
+                <li>
+                    <ul data-role="buttongroup" 
+                        data-index="0"
+                        data-bind="events: { select: onFilterSelected }">
+                        <li>show all</li>
+                        <li>show not left yet</li>
+                    </ul>
+                </li>
+            </ul>
+
             <ul id="matches-listview"  
                 data-role="listview" 
                 data-template="mobile-listview-travel-matches"
@@ -93,6 +103,7 @@
 
         </li>
     </ul>
+
 </div>
 
 <script type="text/x-kendo-tmpl" id="mobile-listview-travel-matches">
