@@ -55,17 +55,26 @@
             </ul>
 
         </li>
+
         <li data-bind="visible:checkIsNotEdit()" >
             Your Travel Settings
-            <div style="display: block; margin: 0 2em 0 2em;">
-                Office: <i><span data-bind="text:office.name"></span></i><br/>
-                Neighborhood: <i><span data-bind="text:neighborhood.name"></span></i><br/>
-                Arrive at: <i><span data-bind="text:arrivalTime.name"></span></i><br/>
-                You will: <i><span data-bind="text:getRideType()"></span></i><br/>
-            </div>
-            <a data-role="button"
-               data-bind="events: { click: onEdit }"
-               style="display: block; margin: 0 2em 0 2em; text-align: center;">Edit</a>
+            <ul>
+                <li>
+                    <div>
+                        You are travelling from <b><span data-bind="text:neighborhood.name"></span></b><br/>
+                        To the <b><span data-bind="text:office.name"></span></b> office<br/>
+                        You arrive at <b><span data-bind="text:arrivalTime.name"></span></b><br/>
+                        and you will <b><span data-bind="text:getRideType()"></span></b><br/>
+                    </div>
+                </li>
+                <li>
+                    <i></i>
+                    <a data-role="button"
+                       data-bind="events: { click: onEdit }"
+                       style="display: block; margin: 0 2em 0 2em; text-align: center;">Edit</a>
+                </li>
+            </ul>
+
         </li>
 
         <li data-bind="visible:checkIsNotEdit()">
@@ -83,13 +92,11 @@
     ${user.name} (<span>${user.team})</span><br>
     <img src="http://demos.kendoui.com/content/mobile/overview/carine.jpg" />
     <div >
-        
         Traveling from <b><span>${travelInfo.neighborhood.name}</span></b><br>
         Arrives at <b><span>${travelInfo.arrivalTime.name}</span></b><br>
         Wants to <b><span>${getRideTypeDescription(travelInfo.rideType)}</span></b><br>
-        <span>
-            phone: <a href="tel:${user.phone}">${user.phone}</a>
-        </span>
+        <span> phone:
+            <a href="tel:${user.phone}">${user.phone}</a> </span>
     </div>
 </script>
 
