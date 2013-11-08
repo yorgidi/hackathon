@@ -10,6 +10,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "PeopleData.h"
 #import "PersonCell.h"
+#import "Utils.h"
 #import "PeopleVC.h"
 
 @interface PeopleVC () <UISearchBarDelegate, PersonCellDelegate, MFMailComposeViewControllerDelegate>
@@ -93,7 +94,7 @@
     NSString *phoneNumber = [@"tel://" stringByAppendingString:data[@"phone"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 #if TARGET_IPHONE_SIMULATOR
-    [self showAlertWithTitle:@"Simulator"
+    [Utils showAlertWithTitle:@"Simulator"
                   andMessage:[NSString stringWithFormat:@"Cannot call %@ on Simulator", data[@"phone"]]];
 #endif
 }
@@ -109,12 +110,6 @@
     NSDictionary* data = _currentData[cell.index];
     NSString* email = data[@"email"];
     [self showMailComposer:email];
-}
-
-- (void)showAlertWithTitle:(NSString *)title andMessage:(NSString *)message
-{
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
 }
 
 #pragma mark - Mail sending code and delegates
@@ -138,7 +133,7 @@
 		}
 		else {
 			// Device is not configured for sending emails, so notify user.
-            [self showAlertWithTitle:NSLocalizedString(@"Unable to e-mail", @"title for cannot email") andMessage:NSLocalizedString(@"This device is not yet configured for sending e-mails.", @"message for not being able to send e-mail")];
+            [Utils showAlertWithTitle:NSLocalizedString(@"Unable to e-mail", @"title for cannot email") andMessage:NSLocalizedString(@"This device is not yet configured for sending e-mails.", @"message for not being able to send e-mail")];
 		}
 	}
 }
@@ -173,7 +168,7 @@
 			break;
 	}
 	// Notifies user of any Mail Composer errors received with an Alert View dialog.
-    //[self showAlertWithTitle:resultTitle andMessage:resultMsg];
+    //[Utils showAlertWithTitle:resultTitle andMessage:resultMsg];
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 г. Telerik. All rights reserved.
 //
 
-#import "CarPullVC.h"
+#import "CarPoolVC.h"
 
-@interface CarPullVC ()
+@interface CarPoolVC ()
 
 @property (nonatomic, strong) IBOutlet UILabel* labelHasFreeSeats;
 @property (nonatomic, strong) IBOutlet UITextField* textHasFreeSeats;
 
 @end
 
-@implementation CarPullVC
+@implementation CarPoolVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

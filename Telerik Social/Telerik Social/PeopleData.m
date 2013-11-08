@@ -84,10 +84,10 @@
                         @"phone": @"+359887584263"
                         },
                     @{
-                        @"name": @"Stephen Forte",
-                        @"email": @"stephen.forte@telerik.com",
+                        @"name": @"Steve Forte",
+                        @"email": @"Steve.Forte@telerik.com",
                         @"team": @"CSO",
-                        @"phone": @"+359896555888"
+                        @"phone": @"+156474545"
                         },
                     @{
                         @"name": @"Doug Laird",

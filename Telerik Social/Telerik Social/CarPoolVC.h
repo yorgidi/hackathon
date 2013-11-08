@@ -1,5 +1,5 @@
 //
-//  CarPullVC.h
+//  CarPoolVC.h
 //  Telerik Social
 //
 //  Created by Stanimir Karoserov on 07.11.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarPullVC : UIViewController
+@interface CarPoolVC : UIViewController
 
 @end

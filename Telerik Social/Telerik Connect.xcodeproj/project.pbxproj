@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA454D50182CF2A30063A33A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DA454D4F182CF2A30063A33A /* Utils.m */; };
+		DA454D53182CFFE00063A33A /* TimeSlotsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA454D52182CFFE00063A33A /* TimeSlotsVC.m */; };
 		DAE4545E182BD6300021911C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4545D182BD6300021911C /* Foundation.framework */; };
 		DAE45460182BD6300021911C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE4545F182BD6300021911C /* CoreGraphics.framework */; };
 		DAE45462182BD6300021911C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE45461182BD6300021911C /* UIKit.framework */; };
@@ -25,7 +27,7 @@
 		DAE45499182BEB450021911C /* menu.html in Resources */ = {isa = PBXBuildFile; fileRef = DAE45498182BEB450021911C /* menu.html */; };
 		DAE4549C182BEF510021911C /* MassageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE4549B182BEF510021911C /* MassageVC.m */; };
 		DAE4549F182BF2EA0021911C /* LeavesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE4549E182BF2EA0021911C /* LeavesVC.m */; };
-		DAE454A2182BFECA0021911C /* CarPullVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A1182BFECA0021911C /* CarPullVC.m */; };
+		DAE454A2182BFECA0021911C /* CarPoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A1182BFECA0021911C /* CarPoolVC.m */; };
 		DAE454A5182C070B0021911C /* PeopleData.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A4182C070B0021911C /* PeopleData.m */; };
 		DAE454A8182C0B680021911C /* PeopleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454A7182C0B680021911C /* PeopleVC.m */; };
 		DAE454AB182C0CBD0021911C /* PersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE454AA182C0CBD0021911C /* PersonCell.m */; };
@@ -57,23 +59,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DAE4545A182BD6300021911C /* Telerik Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telerik Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA454D4E182CF2A30063A33A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		DA454D4F182CF2A30063A33A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		DA454D51182CFFE00063A33A /* TimeSlotsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlotsVC.h; sourceTree = "<group>"; };
+		DA454D52182CFFE00063A33A /* TimeSlotsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlotsVC.m; sourceTree = "<group>"; };
+		DAE4545A182BD6300021911C /* Telerik Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telerik Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE4545D182BD6300021911C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DAE4545F182BD6300021911C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DAE45461182BD6300021911C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DAE45465182BD6300021911C /* Telerik Social-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik Social-Info.plist"; sourceTree = "<group>"; };
+		DAE45465182BD6300021911C /* Telerik Connect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik Connect-Info.plist"; sourceTree = "<group>"; };
 		DAE45467182BD6300021911C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAE45469182BD6300021911C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DAE4546B182BD6300021911C /* Telerik Social-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Telerik Social-Prefix.pch"; sourceTree = "<group>"; };
+		DAE4546B182BD6300021911C /* Telerik Connect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Telerik Connect-Prefix.pch"; sourceTree = "<group>"; };
 		DAE4546C182BD6300021911C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAE4546D182BD6300021911C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DAE45470182BD6300021911C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE45472182BD6300021911C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DAE45473182BD6300021911C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DAE45475182BD6300021911C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Telerik SocialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE4547B182BD6300021911C /* Telerik ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Telerik ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE4547C182BD6300021911C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DAE45484182BD6300021911C /* Telerik SocialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik SocialTests-Info.plist"; sourceTree = "<group>"; };
+		DAE45484182BD6300021911C /* Telerik ConnectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Telerik ConnectTests-Info.plist"; sourceTree = "<group>"; };
 		DAE45486182BD6300021911C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAE45488182BD6300021911C /* Telerik_SocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Telerik_SocialTests.m; sourceTree = "<group>"; };
 		DAE45492182BEA3E0021911C /* DailyMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyMenuVC.h; sourceTree = "<group>"; };
@@ -83,8 +89,8 @@
 		DAE4549B182BEF510021911C /* MassageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MassageVC.m; sourceTree = "<group>"; };
 		DAE4549D182BF2EA0021911C /* LeavesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeavesVC.h; sourceTree = "<group>"; };
 		DAE4549E182BF2EA0021911C /* LeavesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeavesVC.m; sourceTree = "<group>"; };
-		DAE454A0182BFECA0021911C /* CarPullVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPullVC.h; sourceTree = "<group>"; };
-		DAE454A1182BFECA0021911C /* CarPullVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPullVC.m; sourceTree = "<group>"; };
+		DAE454A0182BFECA0021911C /* CarPoolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPoolVC.h; sourceTree = "<group>"; };
+		DAE454A1182BFECA0021911C /* CarPoolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPoolVC.m; sourceTree = "<group>"; };
 		DAE454A3182C070B0021911C /* PeopleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleData.h; sourceTree = "<group>"; };
 		DAE454A4182C070B0021911C /* PeopleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleData.m; sourceTree = "<group>"; };
 		DAE454A6182C0B680021911C /* PeopleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleVC.h; sourceTree = "<group>"; };
@@ -137,8 +143,8 @@
 		DAE45451182BD6300021911C = {
 			isa = PBXGroup;
 			children = (
-				DAE45463182BD6300021911C /* Telerik Social */,
-				DAE45482182BD6300021911C /* Telerik SocialTests */,
+				DAE45463182BD6300021911C /* Telerik Connect */,
+				DAE45482182BD6300021911C /* Telerik ConnectTests */,
 				DAE4545C182BD6300021911C /* Frameworks */,
 				DAE4545B182BD6300021911C /* Products */,
 			);
@@ -147,8 +153,8 @@
 		DAE4545B182BD6300021911C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAE4545A182BD6300021911C /* Telerik Social.app */,
-				DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */,
+				DAE4545A182BD6300021911C /* Telerik Connect.app */,
+				DAE4547B182BD6300021911C /* Telerik ConnectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +172,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DAE45463182BD6300021911C /* Telerik Social */ = {
+		DAE45463182BD6300021911C /* Telerik Connect */ = {
 			isa = PBXGroup;
 			children = (
 				DAE45497182BEB450021911C /* assets */,
@@ -181,44 +187,50 @@
 				DAE45493182BEA3E0021911C /* DailyMenuVC.m */,
 				DAE4549A182BEF510021911C /* MassageVC.h */,
 				DAE4549B182BEF510021911C /* MassageVC.m */,
+				DA454D51182CFFE00063A33A /* TimeSlotsVC.h */,
+				DA454D52182CFFE00063A33A /* TimeSlotsVC.m */,
 				DAE4549D182BF2EA0021911C /* LeavesVC.h */,
 				DAE4549E182BF2EA0021911C /* LeavesVC.m */,
-				DAE454A0182BFECA0021911C /* CarPullVC.h */,
-				DAE454A1182BFECA0021911C /* CarPullVC.m */,
+				DAE454A0182BFECA0021911C /* CarPoolVC.h */,
+				DAE454A1182BFECA0021911C /* CarPoolVC.m */,
 				DAE454A3182C070B0021911C /* PeopleData.h */,
 				DAE454A4182C070B0021911C /* PeopleData.m */,
 				DAE454A6182C0B680021911C /* PeopleVC.h */,
 				DAE454A7182C0B680021911C /* PeopleVC.m */,
 				DAE454A9182C0CBD0021911C /* PersonCell.h */,
 				DAE454AA182C0CBD0021911C /* PersonCell.m */,
+				DA454D4E182CF2A30063A33A /* Utils.h */,
+				DA454D4F182CF2A30063A33A /* Utils.m */,
 			);
+			name = "Telerik Connect";
 			path = "Telerik Social";
 			sourceTree = "<group>";
 		};
 		DAE45464182BD6300021911C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAE45465182BD6300021911C /* Telerik Social-Info.plist */,
+				DAE45465182BD6300021911C /* Telerik Connect-Info.plist */,
 				DAE45466182BD6300021911C /* InfoPlist.strings */,
 				DAE45469182BD6300021911C /* main.m */,
-				DAE4546B182BD6300021911C /* Telerik Social-Prefix.pch */,
+				DAE4546B182BD6300021911C /* Telerik Connect-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DAE45482182BD6300021911C /* Telerik SocialTests */ = {
+		DAE45482182BD6300021911C /* Telerik ConnectTests */ = {
 			isa = PBXGroup;
 			children = (
 				DAE45488182BD6300021911C /* Telerik_SocialTests.m */,
 				DAE45483182BD6300021911C /* Supporting Files */,
 			);
+			name = "Telerik ConnectTests";
 			path = "Telerik SocialTests";
 			sourceTree = "<group>";
 		};
 		DAE45483182BD6300021911C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAE45484182BD6300021911C /* Telerik SocialTests-Info.plist */,
+				DAE45484182BD6300021911C /* Telerik ConnectTests-Info.plist */,
 				DAE45485182BD6300021911C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -256,9 +268,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAE45459182BD6300021911C /* Telerik Social */ = {
+		DAE45459182BD6300021911C /* Telerik Connect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Social" */;
+			buildConfigurationList = DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Connect" */;
 			buildPhases = (
 				DAE45456182BD6300021911C /* Sources */,
 				DAE45457182BD6300021911C /* Frameworks */,
@@ -268,14 +280,14 @@
 			);
 			dependencies = (
 			);
-			name = "Telerik Social";
+			name = "Telerik Connect";
 			productName = "Telerik Social";
-			productReference = DAE4545A182BD6300021911C /* Telerik Social.app */;
+			productReference = DAE4545A182BD6300021911C /* Telerik Connect.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DAE4547A182BD6300021911C /* Telerik SocialTests */ = {
+		DAE4547A182BD6300021911C /* Telerik ConnectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik SocialTests" */;
+			buildConfigurationList = DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik ConnectTests" */;
 			buildPhases = (
 				DAE45477182BD6300021911C /* Sources */,
 				DAE45478182BD6300021911C /* Frameworks */,
@@ -286,9 +298,9 @@
 			dependencies = (
 				DAE45481182BD6300021911C /* PBXTargetDependency */,
 			);
-			name = "Telerik SocialTests";
+			name = "Telerik ConnectTests";
 			productName = "Telerik SocialTests";
-			productReference = DAE4547B182BD6300021911C /* Telerik SocialTests.xctest */;
+			productReference = DAE4547B182BD6300021911C /* Telerik ConnectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +317,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Social" */;
+			buildConfigurationList = DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Connect" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -318,8 +330,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAE45459182BD6300021911C /* Telerik Social */,
-				DAE4547A182BD6300021911C /* Telerik SocialTests */,
+				DAE45459182BD6300021911C /* Telerik Connect */,
+				DAE4547A182BD6300021911C /* Telerik ConnectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -365,13 +377,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE454AB182C0CBD0021911C /* PersonCell.m in Sources */,
+				DA454D50182CF2A30063A33A /* Utils.m in Sources */,
 				DAE45474182BD6300021911C /* ViewController.m in Sources */,
 				DAE45494182BEA3E0021911C /* DailyMenuVC.m in Sources */,
 				DAE4549F182BF2EA0021911C /* LeavesVC.m in Sources */,
 				DAE4549C182BEF510021911C /* MassageVC.m in Sources */,
 				DAE454A8182C0B680021911C /* PeopleVC.m in Sources */,
 				DAE4546E182BD6300021911C /* AppDelegate.m in Sources */,
-				DAE454A2182BFECA0021911C /* CarPullVC.m in Sources */,
+				DAE454A2182BFECA0021911C /* CarPoolVC.m in Sources */,
+				DA454D53182CFFE00063A33A /* TimeSlotsVC.m in Sources */,
 				DAE454A5182C070B0021911C /* PeopleData.m in Sources */,
 				DAE4546A182BD6300021911C /* main.m in Sources */,
 			);
@@ -390,7 +404,7 @@
 /* Begin PBXTargetDependency section */
 		DAE45481182BD6300021911C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAE45459182BD6300021911C /* Telerik Social */;
+			target = DAE45459182BD6300021911C /* Telerik Connect */;
 			targetProxy = DAE45480182BD6300021911C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -501,9 +515,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
-				INFOPLIST_FILE = "Telerik Social/Telerik Social-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Connect-Prefix.pch";
+				INFOPLIST_FILE = "Telerik Social/Telerik Connect-Info.plist";
+				PRODUCT_NAME = "Telerik Connect";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -514,9 +528,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
-				INFOPLIST_FILE = "Telerik Social/Telerik Social-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Telerik Social/Telerik Connect-Prefix.pch";
+				INFOPLIST_FILE = "Telerik Social/Telerik Connect-Info.plist";
+				PRODUCT_NAME = "Telerik Connect";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -537,8 +551,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Telerik SocialTests/Telerik SocialTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Telerik SocialTests/Telerik ConnectTests-Info.plist";
+				PRODUCT_NAME = "Telerik ConnectTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -556,8 +570,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Telerik Social/Telerik Social-Prefix.pch";
-				INFOPLIST_FILE = "Telerik SocialTests/Telerik SocialTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Telerik SocialTests/Telerik ConnectTests-Info.plist";
+				PRODUCT_NAME = "Telerik ConnectTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -566,7 +580,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Social" */ = {
+		DAE45455182BD6300021911C /* Build configuration list for PBXProject "Telerik Connect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE4548A182BD6300021911C /* Debug */,
@@ -575,21 +589,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Social" */ = {
+		DAE4548C182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik Connect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE4548D182BD6300021911C /* Debug */,
 				DAE4548E182BD6300021911C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik SocialTests" */ = {
+		DAE4548F182BD6300021911C /* Build configuration list for PBXNativeTarget "Telerik ConnectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE45490182BD6300021911C /* Debug */,
 				DAE45491182BD6300021911C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
