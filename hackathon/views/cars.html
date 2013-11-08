@@ -1,4 +1,7 @@
-<div data-role="view" id="cars" data-title="Cars" data-layout="layout" data-model="carsViewModel">
+<div data-role="view" id="cars" 
+    data-title="Cars" 
+    data-layout="layout" 
+    data-model="carsViewModel">
     <ul data-role="listview" data-style="inset" data-type="group">
         <li data-bind="visible: checkIsEdit()" >
             Your Travel Settings
@@ -6,7 +9,7 @@
                 <li>
                     <label>
                         Office:
-                        <select id="offices" 
+                        <select id="officesDropDown" 
                                 data-text-field="name" 
                                 data-value-field="officeId"
                                 data-bind="value: office, source: offices"
@@ -15,12 +18,11 @@
                 </li>
                 <li>
                     <label>
-                        Neghbourhood:
-                        <select id="neighborhoods" 
-                                data-cascade-from="offices"
+                        District:
+                        <select data-cascade-from="officesDropDown"
                                 data-text-field="name" 
-                                data-value-field="id" 
-                                data-bind="value: neighborhood, source: neighborhoods"  
+                                data-change="carsViewModel.onDistrictChange"
+                                data-bind="source: districts"  
                                 data-role="dropdownlist"  ></select>
                     </label>
                 </li>

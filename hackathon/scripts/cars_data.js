@@ -1,27 +1,3 @@
-var officesData = [
-    {officeId:1, name: "Sofia, BG" },
-    {officeId:2, name: "Palo Alto, USA" },
-    {officeId:3, name: "Boston, USA" },
-    {officeId:4, name: "Houston, USA" },
-    {officeId:5, name: "Munich, DE" },
-];
-
-var neighborhoodData = [
-    {officeId: 1, id:1, name: "Lozenec" },
-    {officeId: 1, id:2, name: "Mladost 1" },
-    {officeId: 1, id:3, name: "Mladost 2" },
-    {officeId: 1, id:4, name: "Strelbishte" },
-    {officeId: 1, id:5, name: "Dyrventsa" },
-    {officeId: 2, id:6, name: "Palo Alto 1" },
-    {officeId: 2, id:7, name: "Palo Alto 2" },
-    {officeId: 3, id:8, name: "Boston 1" },
-    {officeId: 3, id:9, name: "Boston 2" },
-    {officeId: 4, id:10, name: "Houston 1" },
-    {officeId: 4, id:11, name: "Houston 2" },
-    {officeId: 5, id:12, name: "Munich 1" },
-    {officeId: 5, id:13, name: "Munich 2" },
-];
-    
 var arrivalTimes = [
     {id:1, name: "7:30" },
     {id:2, name: "8:00" },
@@ -87,21 +63,54 @@ function getRideTypeDescription(type) {
     }
 }
 
+var officesDS = new kendo.data.DataSource({
+    type: 'everlive',
+    transport: {
+        typeName: 'Offices'
+    },
+    schema: {
+        model: {
+            id: Everlive.idField,
+            fields: {
+                officeId: Everlive.idField,
+                name: "Name"
+            }
+        }
+    }
+});
+
+var districtsDS = new kendo.data.DataSource({
+    type: 'everlive',
+    transport: {
+        typeName: 'Districts'
+    },
+    schema: {
+        model: {
+            id: Everlive.idField,
+            fields: {
+                id:Everlive.idField,
+                officeId: "Office",
+                name: "Name"
+            }
+        }
+    }
+});
+
 var carsViewModel = kendo.observable({
-    offices: officesData,
-    neighborhoods: neighborhoodData,
+    offices: officesDS,
+    districts: districtsDS,
     arrivalTimes: arrivalTimes,
     travelMatches: travelMatches,  
     
-    office: officesData[0],
-    neighborhood: neighborhoodData[0],
+    office: null,
+    dsitrict: null,
     arrivalTime: arrivalTimes[0],
     rideType: 1,
-    isEdit: false,
+    isEdit: true,
     
     getRideType: function() {
         var type = carsViewModel.get("rideType");
-        return getRideTypeDescription (type);
+        return getRideTypeDescription(type);
     },
     
     checkIsEdit: function() {
@@ -111,6 +120,9 @@ var carsViewModel = kendo.observable({
         return !carsViewModel.get("isEdit");
     },
 
+    onDistrictChange: function() {
+        console.log(JSON.stringify(this.value()));
+    },
     onRideSelected: function(e) {
         var buttonGroup = e.sender;
         var index = buttonGroup.current().index();
