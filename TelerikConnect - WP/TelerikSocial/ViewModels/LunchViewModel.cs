@@ -17,7 +17,7 @@ namespace TelerikSocial.ViewModels
 
 		private readonly DispatcherTimer timeLeftTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
 
-		private readonly int voteDeadline = 15;
+		private readonly int voteDeadline = 12;
 
 		private string selectedTeam;
 

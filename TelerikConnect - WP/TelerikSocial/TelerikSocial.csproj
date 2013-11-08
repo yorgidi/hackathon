@@ -118,7 +118,6 @@
     <Compile Include="Views\DailyMenuFragment.xaml.cs">
       <DependentUpon>DailyMenuFragment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,8 +127,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\ItemViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\LeavesFragment.xaml.cs">
       <DependentUpon>LeavesFragment.xaml</DependentUpon>
     </Compile>
@@ -150,10 +147,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </DesignData>
     <Page Include="Views\LeavesFragment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -31,7 +31,6 @@ namespace TelerikSocial
 		{
 			ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-			SimpleIoc.Default.Register<MainViewModel>();
 			SimpleIoc.Default.Register<DailyMenuViewModel>();
 			SimpleIoc.Default.Register<LeavesViewModel>();
 			SimpleIoc.Default.Register<LunchViewModel>();
