@@ -3,27 +3,31 @@
 </div>
 
 <script type="text/x-kendo-tmpl" id="mobile-listview-filtering-template">
-        
-           ${name}<br><img src="http://demos.kendoui.com/content/mobile/overview/carine.jpg" />
-           <div >
-               <span>${email}</span><br>
-               <span>${team}</span><br>
-               <span><a href="tel:${phone}">${phone}</a></span><br>
-           </div>
+    <span>${name}</span>
+    <br><img src="${imageUrl}" />
+    <div >
+        <span>${team}</span><br>
+        <span>${email}</span><br>
+        <span>
+            <a href="tel:${phone}">${phone}</a>
+        </span><br>
+    </div>
 </script>
 <style scoped>
-    img{
-        float:left;
+    img
+    {
+        float: left;
     }
-    #people-listview div{
-        float:right;
-        font-size:15px;
-        width:150px;
-        height:50px;
-        position:relative;
-        left:-35px;
+    #people-listview div
+    {
+        float: left;
+        margin-left: 10px;
+        font-size: 15px;
+        height: 80px;
+        position: relative;
     }
-    #people-listview li{
-        height:150px;
+    #people-listview li
+    {
+        height: 120px;
     }
 </style>

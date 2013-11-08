@@ -48,7 +48,8 @@
 }
 header span
 {
-    background-image: url("http://i.imgur.com/ntoVYhJ.png");
+    /*background-image: url("http://i.imgur.com/ntoVYhJ.png");
+    padding-left: 50px;*/
     background-repeat: no-repeat;
     background-size: 45px;
     height: 100%;
@@ -57,7 +58,6 @@ header span
     font-weight: 100 !important;
     font-family: Verdana;
     font-size: 24px;
-    padding-left: 50px;
     color: rgb(6, 148, 196);
     margin-top: 10px;
     margin-bottom: 10px;
