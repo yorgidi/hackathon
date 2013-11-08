@@ -172,6 +172,12 @@
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ([_searchBar isFirstResponder])
+        [_searchBar resignFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 

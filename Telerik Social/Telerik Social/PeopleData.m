@@ -18,6 +18,42 @@
     if (self) {
         _people = @[
                     @{
+                        @"name": @"Svetozar Georgiev",
+                        @"email": @"svetozar.georgiev@telerik.com",
+                        @"team": @"CEO",
+                        @"phone": @"+359896111777"
+                        },
+                    @{
+                        @"name": @"Todd Anglin",
+                        @"email": @"todd.anglin@telerik.com",
+                        @"team": @"VP",
+                        @"phone": @"+1564753247"
+                        },
+                    @{
+                        @"name": @"Steve Forte",
+                        @"email": @"Steve.Forte@telerik.com",
+                        @"team": @"CSO",
+                        @"phone": @"+156474545"
+                        },
+                    @{
+                        @"name": @"Doug Laird",
+                        @"email": @"doug.laird@telerik.com",
+                        @"team": @"CMO",
+                        @"phone": @"+155584756"
+                        },
+                    @{
+                        @"name": @"Mihail Valkov",
+                        @"email": @"mihail.valkov@telerik.com",
+                        @"team": @"Dev. Manager",
+                        @"phone": @"+359887584263"
+                        },
+                    @{
+                        @"name": @"Petya Bogdanova",
+                        @"email": @"petya.bogdanova@telerik.com",
+                        @"team": @"Sales",
+                        @"phone": @"+359889147648"
+                        },
+                    @{
                         @"name": @"Kiril Nikolov",
                         @"email": @"kiril.nikolov@telerik.com",
                         @"team":@"Kendo UI",
@@ -47,12 +83,7 @@
                         @"team": @"xPlatCore",
                         @"phone": @"+359896895148"
                         },
-                    @{
-                        @"name": @"Petya Bogdanova",
-                        @"email": @"petya.bogdanova@telerik.com",
-                        @"team": @"Sales",
-                        @"phone": @"+359889147648"
-                        },
+
                     @{
                         @"name": @"Nikola Irinchev",
                         @"email": @"nikola.irinchev@telerik.com",
@@ -65,36 +96,6 @@
                         @"team": @"Team Puls",
                         @"phone": @"+359896895865"
                         },
-                    @{
-                        @"name": @"Svetozar Georgiev",
-                        @"email": @"svetozar.georgiev@telerik.com",
-                        @"team": @"CEO",
-                        @"phone": @"+359896111777"
-                        },
-                    @{
-                        @"name": @"Todd Anglin",
-                        @"email": @"todd.anglin@telerik.com",
-                        @"team": @"VP",
-                        @"phone": @"+1564753247"
-                        },
-                    @{
-                        @"name": @"Mihail Valkov",
-                        @"email": @"mihail.valkov@telerik.com",
-                        @"team": @"Dev. Manager",
-                        @"phone": @"+359887584263"
-                        },
-                    @{
-                        @"name": @"Steve Forte",
-                        @"email": @"Steve.Forte@telerik.com",
-                        @"team": @"CSO",
-                        @"phone": @"+156474545"
-                        },
-                    @{
-                        @"name": @"Doug Laird",
-                        @"email": @"doug.laird@telerik.com",
-                        @"team": @"CMO",
-                        @"phone": @"+155584756"
-                        }
                     ];
   
     }

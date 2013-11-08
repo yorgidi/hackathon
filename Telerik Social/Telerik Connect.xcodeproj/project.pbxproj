@@ -39,7 +39,7 @@
 		DAE454BF182C1E040021911C /* nikola irinchev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B2182C1E040021911C /* nikola irinchev.jpg */; };
 		DAE454C0182C1E040021911C /* petya bogdanova.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B3182C1E040021911C /* petya bogdanova.jpg */; };
 		DAE454C1182C1E040021911C /* stanimir karoserov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B4182C1E040021911C /* stanimir karoserov.jpg */; };
-		DAE454C2182C1E040021911C /* stephen forte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B5182C1E040021911C /* stephen forte.jpg */; };
+		DAE454C2182C1E040021911C /* steve forte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B5182C1E040021911C /* steve forte.jpg */; };
 		DAE454C3182C1E040021911C /* svetozar georgiev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B6182C1E040021911C /* svetozar georgiev.jpg */; };
 		DAE454C4182C1E040021911C /* todd anglin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B7182C1E040021911C /* todd anglin.jpg */; };
 		DAE454C5182C1E040021911C /* viktor bukurov.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAE454B8182C1E040021911C /* viktor bukurov.jpg */; };
@@ -105,7 +105,7 @@
 		DAE454B2182C1E040021911C /* nikola irinchev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nikola irinchev.jpg"; sourceTree = "<group>"; };
 		DAE454B3182C1E040021911C /* petya bogdanova.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "petya bogdanova.jpg"; sourceTree = "<group>"; };
 		DAE454B4182C1E040021911C /* stanimir karoserov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stanimir karoserov.jpg"; sourceTree = "<group>"; };
-		DAE454B5182C1E040021911C /* stephen forte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stephen forte.jpg"; sourceTree = "<group>"; };
+		DAE454B5182C1E040021911C /* steve forte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "steve forte.jpg"; sourceTree = "<group>"; };
 		DAE454B6182C1E040021911C /* svetozar georgiev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "svetozar georgiev.jpg"; sourceTree = "<group>"; };
 		DAE454B7182C1E040021911C /* todd anglin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "todd anglin.jpg"; sourceTree = "<group>"; };
 		DAE454B8182C1E040021911C /* viktor bukurov.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "viktor bukurov.jpg"; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 				DAE454B2182C1E040021911C /* nikola irinchev.jpg */,
 				DAE454B3182C1E040021911C /* petya bogdanova.jpg */,
 				DAE454B4182C1E040021911C /* stanimir karoserov.jpg */,
-				DAE454B5182C1E040021911C /* stephen forte.jpg */,
+				DAE454B5182C1E040021911C /* steve forte.jpg */,
 				DAE454B6182C1E040021911C /* svetozar georgiev.jpg */,
 				DAE454B7182C1E040021911C /* todd anglin.jpg */,
 				DAE454B8182C1E040021911C /* viktor bukurov.jpg */,
@@ -343,7 +343,7 @@
 			files = (
 				DAE454BE182C1E040021911C /* mihail valkov.jpg in Resources */,
 				DAE454C4182C1E040021911C /* todd anglin.jpg in Resources */,
-				DAE454C2182C1E040021911C /* stephen forte.jpg in Resources */,
+				DAE454C2182C1E040021911C /* steve forte.jpg in Resources */,
 				DAE454BC182C1E040021911C /* georgi mateev.jpg in Resources */,
 				DAE454BB182C1E040021911C /* doug laird.jpg in Resources */,
 				DAE45476182BD6300021911C /* Images.xcassets in Resources */,
