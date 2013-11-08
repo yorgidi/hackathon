@@ -1,0 +1,58 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TelerikSocial.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:local="clr-namespace:TelerikSocial.Views"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+         <!--Panorama control-->
+		<phone:Panorama>
+			<phone:Panorama.Title>
+				<StackPanel Orientation="Horizontal">
+					<Image Source="Images\telerikLogo.png" Margin="0,60,0,20" Stretch="Uniform" />
+					<TextBlock Style="{StaticResource PhoneTextHugeStyle}">
+						<Run Text="t" FontWeight="SemiBold" /><Run Text="elerik connect"/>
+					</TextBlock>
+				</StackPanel>
+			</phone:Panorama.Title>
+
+			<!--<phone:Panorama.Background>
+                <ImageBrush ImageSource="/TelerikSocial;component/Assets/PanoramaBackground.png"/>
+            </phone:Panorama.Background>-->
+
+			<!--Panorama item one-->
+			<phone:PanoramaItem Header="daily menu">
+				<!--Single line list with text wrapping-->
+				<local:DailyMenuFragment />
+			</phone:PanoramaItem>
+
+			<phone:PanoramaItem Header="lunch">
+				<local:LunchFragment />
+			</phone:PanoramaItem>
+
+			<phone:PanoramaItem Header="leaves">
+				<local:LeavesFragment />
+			</phone:PanoramaItem>
+
+			<phone:PanoramaItem Header="car pool">
+
+			</phone:PanoramaItem>
+
+			<phone:PanoramaItem Header="masssage">
+
+			</phone:PanoramaItem>
+		</phone:Panorama>
+	</Grid>
+</phone:PhoneApplicationPage>
