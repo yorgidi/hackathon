@@ -1,11 +1,9 @@
-var arrivalTimes = [
+var timeOptionsDS = [
     {id:1, name: "7:30" },
     {id:2, name: "8:00" },
     {id:3, name: "8:30" },
     {id:4, name: "9:00" },
     {id:5, name: "9:30" },
-    {id:6, name: "10:00" },
-    {id:7, name: "10:30" },
 ];
 
 var travelMatches = [
@@ -19,7 +17,7 @@ var travelMatches = [
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
             neighborhood: {officeId: 1, id:1, name: "Lozenec" },
-            arrivalTime: {id:1, name: "7:30" },
+            leaveTime: {id:1, name: "7:30" },
             rideType: 0,            
         }
     },{
@@ -32,7 +30,7 @@ var travelMatches = [
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
             neighborhood: {officeId: 1, id:1, name: "Lozenec" },
-            arrivalTime: {id:4, name: "9:00" },
+            leaveTime: {id:4, name: "9:00" },
             rideType: 1,            
         }
     },{
@@ -45,7 +43,7 @@ var travelMatches = [
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
             neighborhood: {officeId: 1, id:1, name: "Lozenec" },
-            arrivalTime: {id:5, name: "9:30" },
+            leaveTime: {id:5, name: "9:30" },
             rideType: 2,            
         }
     }
@@ -88,7 +86,6 @@ var districtsDS = new kendo.data.DataSource({
         model: {
             id: Everlive.idField,
             fields: {
-                id:Everlive.idField,
                 officeId: "Office",
                 name: "Name"
             }
@@ -99,14 +96,14 @@ var districtsDS = new kendo.data.DataSource({
 var carsViewModel = kendo.observable({
     offices: officesDS,
     districts: districtsDS,
-    arrivalTimes: arrivalTimes,
+    timeOptions: timeOptionsDS,
     travelMatches: travelMatches,  
     
     office: null,
     dsitrict: null,
-    arrivalTime: arrivalTimes[0],
+    leaveTime: null,
     rideType: 1,
-    isEdit: true,
+    isEdit: false,
     
     getRideType: function() {
         var type = carsViewModel.get("rideType");
@@ -121,7 +118,8 @@ var carsViewModel = kendo.observable({
     },
 
     onDistrictChange: function() {
-        console.log(JSON.stringify(this.value()));
+        var district = this.dataSource.get(this.value());
+        carsViewModel.set("district", district); 
     },
     onRideSelected: function(e) {
         var buttonGroup = e.sender;
@@ -139,4 +137,14 @@ var carsViewModel = kendo.observable({
         carsViewModel.set("isEdit", true); 
     },
     
+    onFilterSelected: function(e) {
+        var buttonGroup = e.sender;
+        var index = buttonGroup.current().index();
+        if (index === 0) {
+            carsViewModel.set("travelMatches", travelMatches);
+        }
+        else {
+            carsViewModel.set("travelMatches", travelMatches.slice(2, 3));
+        }
+    }
 });
