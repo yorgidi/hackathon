@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.common.min.css" rel="stylesheet" />
-    <link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.default.min.css" rel="stylesheet" />
-    <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
-    
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="http://cdn.kendostatic.com/2013.3.1030/js/kendo.all.min.js"></script>
-    
-    
-    <script src="scripts/app.js"></script>
-      <script src="scripts/people_data.js"></script>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    
-  </head>
-  <body>
-      <div data-role="view" id="main" data-titel="Telerik Social" data-stretch="true">
-          <div id="tiles-holder">
-              <div class="tile" data-role="touch" data-tap="navPeople"><i class="fa fa-group fa-5x"></i><br>People</div>
-              <div class="tile" data-role="touch" data-tap="navCars"><i class="fa fa-road fa-5x"></i><br>Cars</div>
-              <div class="tile" data-role="touch" data-tap="navMassages"><i class="fa fa-leaf fa-5x"></i><br>Massages</div>
-              <div class="tile" data-role="touch" data-tap="navLeaves"><i class="fa fa-suitcase fa-5x"></i><br>Leaves</div>
-              <div class="tile" data-role="touch" data-tap="navMenu"><i class="fa fa-coffee fa-5x"></i><br>Menu</div>
-              <div class="tile" data-role="touch" data-tap="navSports"><i class="fa fa-smile-o fa-5x"></i><br>Sports</div>
-          </div>
-      </div>
-    <div data-role="layout" data-id="layout">
-      <header data-role="header">
-        <div data-role="navbar">
-          <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
-          <span data-role="view-title"></span>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="http://cdn.kendostatic.com/2013.3.1030/js/kendo.all.min.js"></script>
+
+        <script src="scripts/everlive.all.min.js"></script>
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/menu.js"></script>
+        <script src="scripts/people_data.js"></script>
+        <script src="scripts/cars_data.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+        <div data-role="view" id="main" data-titel="Telerik Social" data-stretch="true">
+            <div id="tiles-holder">
+                <div class="tile" data-role="touch" data-tap="navPeople"><i class="fa fa-group fa-5x"></i><br>People</div>
+                <div class="tile" data-role="touch" data-tap="navCars"><i class="fa fa-road fa-5x"></i><br>Cars</div>
+                <div class="tile" data-role="touch" data-tap="navMassages"><i class="fa fa-leaf fa-5x"></i><br>Massages</div>
+                <div class="tile" data-role="touch" data-tap="navLeaves"><i class="fa fa-suitcase fa-5x"></i><br>Leaves</div>
+                <div class="tile" data-role="touch" data-tap="navMenu"><i class="fa fa-coffee fa-5x"></i><br>Menu</div>
+                <div class="tile" data-role="touch" data-tap="navSports"><i class="fa fa-smile-o fa-5x"></i><br>Sports</div>
+            </div>
         </div>
-      </header>      
-    </div>    
-  </body>
+        <div data-role="layout" data-id="layout">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+                    <span data-role="view-title"></span>
+                </div>
+            </header>
+        </div>
+    </body>
 </html>
