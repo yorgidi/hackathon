@@ -32,27 +32,76 @@ var arrivalTimes = [
     {id:7, name: "10:30" },
 ];
 
+var travelMatches = [
+    {
+        user: {
+            name: "Kiril Nikolov",
+            email: "kiril.nikolov@telerik.com",
+            team:"Kendo UI",
+            phone: "+359887405602"
+        },
+        travelInfo:{
+            office: {officeId:1, name: "Sofia, BG" },
+            neighborhood: {officeId: 1, id:1, name: "Lozenec" },
+            arrivalTime: {id:1, name: "7:30" },
+            rideType: 0,            
+        }
+    },{
+        user:{
+            name: "Viktor Bukurov",
+            email: "viktor.bukurov@telerik.com",
+            team:"Sitefinity",
+            phone: "+359887549181"
+        },
+        travelInfo:{
+            office: {officeId:1, name: "Sofia, BG" },
+            neighborhood: {officeId: 1, id:1, name: "Lozenec" },
+            arrivalTime: {id:4, name: "9:00" },
+            rideType: 1,            
+        }
+    },{
+        user:{
+            name: "Georgi Mateev",
+            email: "Georgi.Mateev@telerik.com",
+            team:"Sitefinity",
+            phone: "+359887546981"
+        },
+        travelInfo:{
+            office: {officeId:1, name: "Sofia, BG" },
+            neighborhood: {officeId: 1, id:1, name: "Lozenec" },
+            arrivalTime: {id:5, name: "9:30" },
+            rideType: 2,            
+        }
+    }
+
+];
+
+function getRideTypeDescription(type) {
+    switch (type) {
+        case 0:
+            return "drive"; 
+        case 1:
+            return "ride"; 
+        case 2:
+            return "drive or ride";
+    }
+}
+
 var carsViewModel = kendo.observable({
     offices: officesData,
     neighborhoods: neighborhoodData,
     arrivalTimes: arrivalTimes,
-        
+    travelMatches: travelMatches,  
+    
     office: officesData[0],
     neighborhood: neighborhoodData[0],
     arrivalTime: arrivalTimes[0],
     rideType: 1,
-    isEdit: true,
+    isEdit: false,
     
     getRideType: function() {
         var type = carsViewModel.get("rideType");
-        switch (type) {
-            case 0:
-                return "drive"; 
-            case 1:
-                return "ride"; 
-            case 2:
-                return "drive or ride";
-        }
+        return getRideTypeDescription (type);
     },
     
     checkIsEdit: function() {
