@@ -2,22 +2,19 @@
     <h1>Leaves</h1>
     
     <ul id="leaves-list">
-        <li>
-            <h2>Regular</h2>
+        <li>            
             <div id="regularLeavesBar" ></div><span id="regularCount" ></span><br/>
-            <span id="usedRegularCount" data-bind="text: usedRegularLeaves"/> / <span id="allRegularCount" data-bind="text: allRegularLeaves"/>
+            <b>Regular: </b><span data-bind="text: usedRegularLeaves"></span> / <span data-bind="text: allRegularLeaves"/>
         </li>
         
         <li>
-            <h2>Student</h2>
             <div id="studentLeavesBar" ></div><span id="studentCount"></span><br/>
-            <span id="usedStudentCount" data-bind="text: usedStudentLeaves"/> / <span id="allStudentCount" data-bind="text: allStudentLeaves"/>            
+            <b>Student: </b><span data-bind="text: usedStudentLeaves"></span> / <span data-bind="text: allStudentLeaves"/>            
         </li>
         
         <li>
-            <h2>Bonus</h2>
             <div id="bonusLeavesBar" ></div><span id="bonusCount"></span><br/>
-            <span id="usedBonusCount" data-bind="text: usedBonusDays"/> / <span id="allBonusCount" data-bind="text: allBonusDays"/>            
+            <b>Bonus days: </b><span data-bind="text: usedBonusDays"></span> / <span data-bind="text: allBonusDays"/>            
         </li>
     </ul>
 </div>
@@ -47,19 +44,7 @@
             progressBars: "#leaves-list div",
             studentLeavesBar: "#studentLeavesBar",
             regularLeavesBar: "#regularLeavesBar",
-            bonusLeavesBar: "#bonusLeavesBar",
-            
-            usedBonusCount: "#usedBonusCount",
-            usedRegularCount: "#usedRegularCount",
-            usedStudentCount: "#usedStudentCount",
-            
-            allBonusCount: "#allBonusCount",
-            allRegularCount: "#allRegularCount",
-            allStudentCount: "#allStudentCount",
-            
-            bonusCount: "#bonusCount",
-            regularCount: "#regularCount",
-            studentCount: "#studentCount",
+            bonusLeavesBar: "#bonusLeavesBar"
         },
         
         initialize: function(){            
@@ -68,54 +53,54 @@
             leaves.loadData(function(data){
                 self.initializeProgressBars(data);
                 
-                self.studentLeavesBar.value(data.remainingStudentLeaves);
-                self.regularLeavesBar.value(data.remainingRegularLeaves);
-                self.bonusLeavesBar.value(data.remainingBonusDays);
+                var usedStudent = data.allStudentLeaves - data.remainingStudentLeaves;
+                var usedBonus = data.allBonusDays - data.remainingBonusDays;
+                var usedRegular = data.allRegularLeaves - data.remainingRegularLeaves;
                 
-                //data.usedStudentLeaves = function() {
-                //    return data.allStudentLeaves - data.remainingStudentLeaves;
-                //}
+                self.studentLeavesBar.value(usedStudent);
+                self.regularLeavesBar.value(usedRegular);
+                self.bonusLeavesBar.value(usedBonus);
                 
-                leavesViewModel.set("usedStudentLeaves", data.allStudentLeaves - data.remainingStudentLeaves);
-                leavesViewModel.set("usedBonusDays", data.allBonusDays - data.remainingBonusDays);
-                leavesViewModel.set("usedRegularLeaves", data.allRegularLeaves - data.remainingRegularLeaves);
+                leavesViewModel.set("usedStudentLeaves", usedStudent);
+                leavesViewModel.set("usedBonusDays", usedBonus);
+                leavesViewModel.set("usedRegularLeaves", usedRegular);
                 
                 leavesViewModel.set("allStudentLeaves", data.allStudentLeaves);
                 leavesViewModel.set("allBonusDays", data.allBonusDays);
                 leavesViewModel.set("allRegularLeaves", data.allRegularLeaves);
-                //var viewModel = kendo.observable(data); 
-                
-                //kendo.bind($("leaves-list"), viewModel);
             });
         },
         
         initializeProgressBars: function(data) {
             this.regularLeavesBar = $("#regularLeavesBar").kendoProgressBar({
-                type: "chunk",
+                type: "value",
                 min: 0,
                 max: data.allRegularLeaves,
                 animation: {
                     duration: 600
                 }
             }).data("kendoProgressBar");
+            this.regularLeavesBar.progressStatus.text(" ");            
             
             this.bonusLeavesBar = $(this.selectors.bonusLeavesBar).kendoProgressBar({
-                type: "percent",
+                type: "value",
                 min: 0,
                 max: data.allBonusDays,
                 animation: {
                     duration: 600
                 }
             }).data("kendoProgressBar");
+            this.bonusLeavesBar.progressStatus.text(" ");
             
             this.studentLeavesBar = $(this.selectors.studentLeavesBar).kendoProgressBar({
-                type: "percent",
+                type: "value",
                 min: 0,
                 max: data.allStudentLeaves,
                 animation: {
                     duration: 600
                 }
             }).data("kendoProgressBar");
+            this.studentLeavesBar.progressStatus.text(" ");
             
             console.log(this.regularLeavesBar);
          },
@@ -137,11 +122,7 @@
         }
     }
     
-    var leaves = new Leaves();
-    //console.log("leaves class: " + Leaves);
-    console.log(leaves);
-    //leaves.initialize();
-    
+    var leaves = new Leaves();    
 </script>
 
  <style scoped>        
@@ -158,7 +139,10 @@
             line-height: 0;
         }
         #leaves-list .k-progressbar {
-            margin: 0 0 5px 0;
-            width: 90%;
+            margin: 0 0 3px 0;
+            width: 95%;
         }
-    </style>
+     #leaves-list li {
+         margin: 15px
+     }
+</style>
