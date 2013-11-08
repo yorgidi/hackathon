@@ -17,7 +17,7 @@ function navMenu() {
 function mobileListViewFiltering() {
     var dataSource = new kendo.data.DataSource({
         transport: {
-            read: function(o){
+            read: function(o) {
                 o.success(peopleData);
             }
         },
@@ -28,7 +28,7 @@ function mobileListViewFiltering() {
         pageSize: 50
     });
 
-    $("#filterable-listview").kendoMobileListView({
+    $("#people-listview").kendoMobileListView({
         dataSource: dataSource,
         template: $("#mobile-listview-filtering-template").text(),
         filterable: {

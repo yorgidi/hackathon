@@ -1,3 +1,74 @@
-  <div data-role="view" id = "cars" data-title="Cars" data-layout="layout">
-      Cars
-    </div>
+<div data-role="view" id="cars" data-title="Cars" data-layout="layout" data-model="carsViewModel">
+    <ul data-role="listview" data-style="inset" data-type="group">
+        <li data-bind="visible: checkIsEdit()" >
+            Your Travel Settings
+            <ul>
+                <li>
+                    <label>
+                        Office:
+                        <select id="offices" 
+                                data-text-field="name" 
+                                data-value-field="officeId"
+                                data-bind="value: office, source: offices"
+                                data-role="dropdownlist" ></select>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Neghbourhood:
+                        <select id="neighborhoods" 
+                                data-cascade-from="offices"
+                                data-text-field="name" 
+                                data-value-field="id" 
+                                data-bind="value: neighborhood, source: neighborhoods"  
+                                data-role="dropdownlist"  ></select>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Office arrival time:
+                        <select id="arrivalTimes" 
+                                data-text-field="name" 
+                                data-value-field="id" 
+                                data-bind="value: arrivalTime, source: arrivalTimes"  
+                                data-role="dropdownlist"  ></select>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        I will
+                        <ul data-role="buttongroup" 
+                            data-index="0"
+                            data-bind="events: { select: onRideSelected }">
+                            <li>drive</li>
+                            <li>ride</li>
+                            <li>both</li>
+                        </ul>
+                    </label>
+                </li>
+                <li>
+                    <i></i>
+                    <a data-role="button"
+                       data-bind="events: { click: onSubmit }"
+                       style="display: block; margin: 0 2em 0 2em; text-align: center;">Submit</a>
+                </li>
+            </ul>
+
+        </li>
+        <li data-bind="visible:checkIsNotEdit()" >
+            Your Travel Settings
+            <ul>
+                <li>Office: <i><span data-bind="text:office.name"></span></i></li>
+                <li>Neighborhood:  <i><span data-bind="text:neighborhood.name"></span></i></li>
+                <li>Arrive at:  <i><span data-bind="text:arrivalTime.name"></span></i></li>
+                <li>You will:  <i><span data-bind="text:getRideType()"></span></i></li>
+                
+            </ul>
+            <a data-role="button"
+               data-bind="events: { click: onEdit }"
+               style="display: block; margin: 0 2em 0 2em; text-align: center;">Edit</a>
+        </li>
+
+        <li data-bind="visible:checkIsNotEdit()">People You Can Join</li>
+    </ul>
+</div>
