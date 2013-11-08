@@ -1,5 +1,5 @@
 <div data-role="view" id = "leaves" data-title="Leaves" data-layout="layout" data-model="leavesViewModel" data-show="leaves.initialize">
-    <h1>Leaves</h1>
+    <!--<h1>Leaves</h1>-->
     
     <ul id="leaves-list">
         <li>            
@@ -20,7 +20,7 @@
     
     <div id="holidays">
         <h1>Official holidays</h1>
-        <select id="regionSelector" onchange="regionChanged()">
+        <select id="regionSelector" onchange="regionChanged()" data-role="dropdownlist">
             <option value="bulgaria">Bulgaria 2013</option>
             <option value="usa">USA 2013</option>
         </select>
@@ -169,7 +169,7 @@
         loadData: function(successCB){
             var data = {
                 allStudentLeaves: 20,
-                remainingStudentLeaves: 6,
+                remainingStudentLeaves: 3,
                 
                 allRegularLeaves: 20,
                 remainingRegularLeaves: 11,
@@ -208,6 +208,11 @@
 </style>
 
 <style scoped>
+    #holidays h1{
+        margin: 15px 0 0 15px;
+        font-size: 1.4em;
+        line-height: 2.3em;
+    }
     #holidays ul {
         list-style-type: none;
         margin: 0;
@@ -226,10 +231,35 @@
          height: 3px;
          line-height: 0;
      }
-    #regionSelector {
+    #holidays .k-dropdown {
         width: 90%;
-        margin: 10px;
+        background-color:transparent;
+        border-bottom: 1px solid black;
+        margin: 0px 0 7px 15px;
         height: 30px;
+    }
+    #holidays .k-dropdown:hover{
+        background-color:transparent !important;
+    }
+    #holidays .k-dropdown span {
+        background-color:transparent;
+        border-width: 0; 
+    }
+    #holidays .k-dropdown .k-input {
+        background-color:transparent;
+        border-width: 0;
+    }
+    #holidays .k-dropdown .k-input:hover {
+        background-color:transparent !important;
+        border-width: 0;
+    }
+    #holidays .k-dropdown .k-dropdown-wrap {
+        background-color:transparent;
+        width: 100%;
+        border-width: 0;
+    }
+    #holidays .k-state-hover, #holidays .k-state-selected {
+        background-color:transparent !important;
     }
 </style>
 <script>

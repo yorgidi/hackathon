@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAE45459182BD6300021911C"
-               BuildableName = "Telerik Social.app"
-               BlueprintName = "Telerik Social"
-               ReferencedContainer = "container:Telerik Social.xcodeproj">
+               BuildableName = "Telerik Connect.app"
+               BlueprintName = "Telerik Connect"
+               ReferencedContainer = "container:Telerik Connect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAE4547A182BD6300021911C"
-               BuildableName = "Telerik SocialTests.xctest"
-               BlueprintName = "Telerik SocialTests"
-               ReferencedContainer = "container:Telerik Social.xcodeproj">
+               BuildableName = "Telerik ConnectTests.xctest"
+               BlueprintName = "Telerik ConnectTests"
+               ReferencedContainer = "container:Telerik Connect.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAE45459182BD6300021911C"
-            BuildableName = "Telerik Social.app"
-            BlueprintName = "Telerik Social"
-            ReferencedContainer = "container:Telerik Social.xcodeproj">
+            BuildableName = "Telerik Connect.app"
+            BlueprintName = "Telerik Connect"
+            ReferencedContainer = "container:Telerik Connect.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAE45459182BD6300021911C"
-            BuildableName = "Telerik Social.app"
-            BlueprintName = "Telerik Social"
-            ReferencedContainer = "container:Telerik Social.xcodeproj">
+            BuildableName = "Telerik Connect.app"
+            BlueprintName = "Telerik Connect"
+            ReferencedContainer = "container:Telerik Connect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAE45459182BD6300021911C"
-            BuildableName = "Telerik Social.app"
-            BlueprintName = "Telerik Social"
-            ReferencedContainer = "container:Telerik Social.xcodeproj">
+            BuildableName = "Telerik Connect.app"
+            BlueprintName = "Telerik Connect"
+            ReferencedContainer = "container:Telerik Connect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

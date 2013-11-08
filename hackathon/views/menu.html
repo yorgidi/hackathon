@@ -1,19 +1,50 @@
-<div data-role="view" id = "menu" data-title="Menu" data-layout="layout" data-show="getMenu">
-    <h2>Soups</h2>
-    <ul id="soups">        
-    </ul>
-    <h2>Salads</h2>
-    <ul id="salads">
-    </ul>
-    <h2>Main courses</h2>
-    <ul id="main-courses">
-    </ul>
-    <h2>Desserts</h2>
-    <ul id="desserts">
-    </ul>
-    <style>
-        ul{
-            list-style-type:none;
-        }
-    </style>
+<div data-role="view" id = "menu" data-title="Menu" data-layout="layout" data-show="initializeMenuView">
+    <section id="menu-date"></section>
+    <section id="menu-list">
+        <h2>Soups</h2>
+        <ul id="soups" class="food-list">        
+        </ul>
+        <h2>Salads</h2>
+        <ul id="salads" class="food-list">
+        </ul>
+        <h2>Main courses</h2>
+        <ul id="main-courses" class="food-list">
+        </ul>
+        <h2>Desserts</h2>
+        <ul id="desserts" class="food-list">
+        </ul>
+    </section>
+    <section id="menu-info"></section>
 </div>
+
+<style scoped>
+    #menu-date {
+        text-align: center;
+        font-size: 1.5em;
+        padding: 0;
+        margin: 10px 0;
+    }
+    
+    #menu-list {
+        width: 90%;
+        margin: auto;
+    }
+    #menu-list h2 {
+        margin: 10px 0;
+    }
+    
+    #menu-list .food-list {
+        padding: 0;
+        margin: 0;
+    }
+    ul{
+        list-style-type:none;
+    }
+    .menu-item {
+        width: 100%;
+        clear: both;
+    }
+    .food-price {
+        float: right;
+    }
+</style>
