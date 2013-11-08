@@ -7,7 +7,7 @@
         <link href="http://cdn.kendostatic.com/2013.3.1030/styles/kendo.default.min.css" rel="stylesheet" />
         <link href="styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
-
+            
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="http://cdn.kendostatic.com/2013.3.1030/js/kendo.all.min.js"></script>
@@ -21,23 +21,40 @@
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     </head>
     <body>
-        <div data-role="view" id="main" data-titel="Telerik Social" data-stretch="true">
+        <div data-role="view" id="main" data-title="Telerik Connect" data-stretch="true">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title" style="font-weight:bold"></span>
+                </div>
+            </header>
             <div id="tiles-holder">
-                <div class="tile" data-role="touch" data-tap="navPeople"><i class="fa fa-group fa-5x"></i><br>People</div>
-                <div class="tile" data-role="touch" data-tap="navCars"><i class="fa fa-road fa-5x"></i><br>Cars</div>
-                <div class="tile" data-role="touch" data-tap="navMassages"><i class="fa fa-leaf fa-5x"></i><br>Massages</div>
-                <div class="tile" data-role="touch" data-tap="navLeaves"><i class="fa fa-suitcase fa-5x"></i><br>Leaves</div>
-                <div class="tile" data-role="touch" data-tap="navMenu"><i class="fa fa-coffee fa-5x"></i><br>Menu</div>
-                <div class="tile" data-role="touch" data-tap="navSports"><i class="fa fa-smile-o fa-5x"></i><br>Sports</div>
+                <div class="tile blue" data-role="touch" data-tap="navPeople">
+                    <i class="fa fa-group fa-5x"></i><br><span>People</span>
+                </div>
+                <div class="tile grey" data-role="touch" data-tap="navCars">
+                    <i class="fa fa-road fa-5x"></i><br><span>Car Pool</span>
+                </div>
+                <div class="tile green" data-role="touch" data-tap="navMassages">
+                    <i class="fa fa-leaf fa-5x"></i><br><span>Massages</span>
+                </div>
+                <div class="tile orange" data-role="touch" data-tap="navLeaves">
+                    <i class="fa fa-suitcase fa-5x"></i><br><span>Leaves</span>
+                </div>
+                <div class="tile pink" data-role="touch" data-tap="navMenu">
+                    <i class="fa fa-coffee fa-5x"></i><br><span>Menu</span>
+                </div>
+                <div class="tile yellow" data-role="touch" data-tap="navSports">
+                    <i class="fa fa-clock-o fa-5x"></i><br><span>Lunch</span>
+                </div>
             </div>
         </div>
         <div data-role="layout" data-id="layout">
-            <header data-role="header">
+<!--            <header data-role="header">
                 <div data-role="navbar">
                     <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
                     <span data-role="view-title"></span>
                 </div>
-            </header>
+            </header>-->
         </div>
     </body>
 </html>
