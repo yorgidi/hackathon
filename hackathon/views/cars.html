@@ -41,10 +41,11 @@
                                 data-role="dropdownlist"  ></select>
                     </label>
                 </li>
-                <li>
+                <li style="height: 45px">
                     <label>
-                        I will
-                        <ul data-role="buttongroup" 
+                        I will:
+                        <ul id="bg-drive-type"
+                            data-role="buttongroup" 
                             data-index="0"
                             data-bind="events: { select: onRideSelected }">
                             <li>drive</li>
@@ -108,7 +109,7 @@
 
 <script type="text/x-kendo-tmpl" id="mobile-listview-travel-matches">
     ${user.name} (<span>${user.team})</span><br>
-    <img src="http://demos.kendoui.com/content/mobile/overview/carine.jpg" />
+    <img src="${user.imageUrl}" />
     <div >
         Traveling from <b><span>${travelInfo.neighborhood.name}</span></b><br>
         leaves at <b><span>${travelInfo.leaveTime.name}</span></b><br>
@@ -121,7 +122,13 @@
 <style scoped>
     img
     {
-        float: left;
+        float:left;
+        height: 75px;
+        width: 75px;
+        clip:rect(30px,7px,30,80px);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     #matches-listview div
     {
@@ -134,5 +141,11 @@
     #matches-listview li
     {
         height: 130px;
+    }
+    #bg-drive-type
+    {
+        position: relative;
+        top: -32px;
+        left: 50px;
     }
 </style>

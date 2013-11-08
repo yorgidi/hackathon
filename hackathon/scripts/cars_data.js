@@ -9,10 +9,11 @@ var timeOptionsDS = [
 var travelMatches = [
     {
         user: {
-            name: "Kiril Nikolov",
-            email: "kiril.nikolov@telerik.com",
-            team:"Kendo UI",
-            phone: "+359887405602"
+            name: "Todd Anglin",
+            email: "todd.anglin@telerik.com",
+            team:"VP",
+            phone: "+1564753247",
+            imageUrl:"images/people/todd-anglin.jpg"
         },
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
@@ -22,10 +23,11 @@ var travelMatches = [
         }
     },{
         user:{
-            name: "Viktor Bukurov",
-            email: "viktor.bukurov@telerik.com",
-            team:"Sitefinity",
-            phone: "+359887549181"
+            name: "Doug Laird",
+            email: "doug.laird@telerik.com",
+            team:"CMO",
+            phone: "+155584756",
+            imageUrl:"images/people/doug-laird.jpg"
         },
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
@@ -35,10 +37,11 @@ var travelMatches = [
         }
     },{
         user:{
-            name: "Georgi Mateev",
-            email: "Georgi.Mateev@telerik.com",
-            team:"Sitefinity",
-            phone: "+359887546981"
+            name: "Petya Bogdanova",
+            email: "petya.bogdanova@telerik.com",
+            team:"Sales",
+            phone: "+359889147648",
+            imageUrl:"images/people/petya-bogdanova.jpg"
         },
         travelInfo:{
             office: {officeId:1, name: "Sofia, BG" },
