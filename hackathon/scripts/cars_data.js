@@ -103,7 +103,7 @@ var carsViewModel = kendo.observable({
     dsitrict: null,
     leaveTime: null,
     rideType: 1,
-    isEdit: false,
+    isEdit: true,
     
     getRideType: function() {
         var type = carsViewModel.get("rideType");
