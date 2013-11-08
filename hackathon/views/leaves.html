@@ -17,6 +17,66 @@
             <b>Bonus days: </b><span data-bind="text: usedBonusDays"></span> / <span data-bind="text: allBonusDays"/>            
         </li>
     </ul>
+    
+    <div id="holidays">
+        <h1>Official holidays</h1>
+        <select id="regionSelector" onchange="regionChanged()">
+            <option value="bulgaria">Bulgaria 2013</option>
+            <option value="usa">USA 2013</option>
+        </select>
+        <ul id="bulgaria-2013">
+            <li>
+                <span>1 January</span>
+            </li>
+            <li>
+                <span>3 March</span>
+            </li>
+            <li>
+                <span>1 May</span>
+            </li>
+            <li>
+                <span>6 September</span>
+            </li>
+            <li>
+                <span>22 September</span>
+            </li>
+            <li>
+                <span>25 December</span>
+            </li>
+        </ul>
+        <ul id="usa-2013" style="display: none">
+            <li>
+                <span>January 1</span>
+            </li>
+            <li>
+                <span>January 21</span>
+            </li>
+            <li>
+                <span>February 18</span>
+            </li>
+            <li>
+                <span>May 27</span>
+            </li>
+            <li>
+                <span>July 4</span>
+            </li>
+            <li>
+                <span>September 2</span>
+            </li>
+            <li>
+                <span>October 14</span>
+            </li>
+            <li>
+                <span>November 11</span>
+            </li>
+            <li>
+                <span>November 28</span>
+            </li>
+            <li>
+                <span>December 25</span>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script>
@@ -126,23 +186,66 @@
 </script>
 
  <style scoped>        
-        #leaves-list {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        #leaves-list li:after {
-            content: "";
-            display: block;
-            clear: both;
-            height: 3px;
-            line-height: 0;
-        }
-        #leaves-list .k-progressbar {
-            margin: 0 0 3px 0;
-            width: 95%;
-        }
+     #leaves-list {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+     }
+     #leaves-list li:after {
+         content: "";
+         display: block;
+         clear: both;
+         height: 3px;
+         line-height: 0;
+     }
+     #leaves-list .k-progressbar {
+         margin: 0 0 3px 0;
+         width: 95%;
+     }
      #leaves-list li {
          margin: 15px
      }
 </style>
+
+<style scoped>
+    #holidays ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 0 0 5px;
+    }    
+    #holidays ul li {
+        float: left;
+        width: 40%;
+        margin: 5px;
+        padding: 5px;
+    }
+    #holidays ul li:after {
+         content: "";
+         display: block;
+         clear: both;
+         height: 3px;
+         line-height: 0;
+     }
+    #regionSelector {
+        width: 90%;
+        margin: 10px;
+        height: 30px;
+    }
+</style>
+<script>
+    function regionChanged(){
+        var regionSelector = document.getElementById("regionSelector");
+          var value = regionSelector.options[regionSelector.selectedIndex].value;
+        
+        switch(value){
+            case "bulgaria":
+                document.getElementById("usa-2013").style.display = "none";
+                document.getElementById("bulgaria-2013").style.display = "block";
+                break;
+            case "usa":
+                document.getElementById("usa-2013").style.display = "block";
+                document.getElementById("bulgaria-2013").style.display = "none";
+                break;
+        }
+    }
+</script>
