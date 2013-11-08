@@ -1,7 +1,3 @@
-var el = new Everlive({
-    apiKey: 'tkDRCGTsZLcnEtsZ'
-});
-
 function setMenu() {
     var data = Everlive.$.data('Menu');
     var date = new Date();
