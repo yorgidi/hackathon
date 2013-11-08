@@ -1,7 +1,7 @@
 <div data-role="view" id="cars" 
-    data-title="Cars" 
-    data-layout="layout" 
-    data-model="carsViewModel">
+     data-title="Cars" 
+     data-layout="layout" 
+     data-model="carsViewModel">
     <ul data-role="listview" data-style="inset" data-type="group">
         <li data-bind="visible: checkIsEdit()" >
             Your Travel Settings
@@ -12,6 +12,7 @@
                         <select id="officesDropDown" 
                                 data-text-field="name" 
                                 data-value-field="officeId"
+                                data-option-label="select office..."
                                 data-bind="value: office, source: offices"
                                 data-role="dropdownlist" ></select>
                     </label>
@@ -19,20 +20,24 @@
                 <li>
                     <label>
                         District:
-                        <select data-cascade-from="officesDropDown"
+                        <select id="districtsDropDown" 
+                                data-cascade-from="officesDropDown"
                                 data-text-field="name" 
+                                data-option-label="select dsitrict..."
+                                data-value-field="id"
                                 data-change="carsViewModel.onDistrictChange"
-                                data-bind="source: districts"  
+                                data-bind="value:dsitrict, source: districts"  
                                 data-role="dropdownlist"  ></select>
                     </label>
                 </li>
                 <li>
                     <label>
-                        Office arrival time:
-                        <select id="arrivalTimes" 
+                        When you leave:
+                        <select id="leaveTimes" 
+                                data-option-label="select time..."
                                 data-text-field="name" 
                                 data-value-field="id" 
-                                data-bind="value: arrivalTime, source: arrivalTimes"  
+                                data-bind="value: leaveTime, source: timeOptions"  
                                 data-role="dropdownlist"  ></select>
                     </label>
                 </li>
@@ -63,10 +68,10 @@
             <ul>
                 <li>
                     <div>
-                        You are travelling from <b><span data-bind="text:neighborhood.name"></span></b><br/>
+                        You live in <b><span data-bind="text:district.name"></span></b><br/>
                         To the <b><span data-bind="text:office.name"></span></b> office<br/>
-                        You arrive at <b><span data-bind="text:arrivalTime.name"></span></b><br/>
-                        and you will <b><span data-bind="text:getRideType()"></span></b><br/>
+                        You leave home at <b><span data-bind="text:leaveTime.name"></span></b><br/>
+                        and you want to <b><span data-bind="text:getRideType()"></span></b><br/>
                     </div>
                 </li>
                 <li>
@@ -95,7 +100,7 @@
     <img src="http://demos.kendoui.com/content/mobile/overview/carine.jpg" />
     <div >
         Traveling from <b><span>${travelInfo.neighborhood.name}</span></b><br>
-        Arrives at <b><span>${travelInfo.arrivalTime.name}</span></b><br>
+        leaves at <b><span>${travelInfo.leaveTime.name}</span></b><br>
         Wants to <b><span>${getRideTypeDescription(travelInfo.rideType)}</span></b><br>
         <span> phone:
             <a href="tel:${user.phone}">${user.phone}</a> </span>
