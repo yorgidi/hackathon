@@ -123,7 +123,7 @@
 		if ([mailClass canSendMail]) {
 			MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 			picker.mailComposeDelegate = self;
-			[picker setSubject:NSLocalizedString(@"Telerik Social", @"used for email subject")];
+			[picker setSubject:NSLocalizedString(@"Telerik Connect", @"used for email subject")];
 			// Fill out the email body text
 			NSString *emailBody = @"";
 			[picker setMessageBody:emailBody isHTML:NO];
